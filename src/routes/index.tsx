@@ -88,7 +88,7 @@ function Navbar() {
 function LogoMark() {
   return (
     <div className="relative grid h-9 w-9 place-items-center rounded-xl bg-gradient-to-br from-[var(--cyan-brand)] to-[var(--aqua-glow)] shadow-[0_8px_24px_-8px_rgba(0,163,255,0.55)]">
-      <Mic className="h-4.5 w-4.5 text-white" strokeWidth={2.5} />
+      <Mic className="h-[18px] w-[18px] text-white" strokeWidth={2.5} />
     </div>
   );
 }
@@ -233,7 +233,7 @@ function HeroVisual() {
       {/* Floating session badge */}
       <div className="glass-card absolute -right-3 top-8 hidden items-center gap-3 rounded-2xl p-3 pr-4 sm:flex">
         <div className="grid h-10 w-10 place-items-center rounded-xl bg-gradient-to-br from-[var(--cyan-brand)] to-[var(--aqua-glow)] text-white">
-          <Mic className="h-4.5 w-4.5" />
+          <Mic className="h-[18px] w-[18px]" />
         </div>
         <div>
           <div className="text-[10px] font-semibold uppercase tracking-wider text-slate-500">
@@ -295,7 +295,7 @@ function Problem() {
     <section id="problem" className="relative py-24 sm:py-28">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <div className="mx-auto max-w-3xl text-center">
-          <span className="inline-flex items-center gap-2 rounded-full border border-rgb-soft bg-[rgba(231,106,106,0.08)] px-3.5 py-1.5 text-[11px] font-semibold tracking-wider text-[var(--soft-red)] uppercase">
+          <span className="inline-flex items-center gap-2 rounded-full border border-[rgba(231,106,106,0.25)] bg-[rgba(231,106,106,0.08)] px-3.5 py-1.5 text-[11px] font-semibold tracking-wider text-[var(--soft-red)] uppercase">
             The Real Problem
           </span>
           <h2 className="mt-5 font-display text-3xl font-extrabold tracking-tight text-[var(--navy)] sm:text-[2.6rem]">
@@ -784,7 +784,7 @@ function Pricing() {
             <ul className="mt-7 grid gap-2.5 sm:grid-cols-2">
               {includes.map((it) => (
                 <li key={it} className="flex items-start gap-2.5 text-sm text-white/85">
-                  <CheckCircle2 className="mt-0.5 h-4.5 w-4.5 shrink-0 text-[var(--aqua-glow)]" />
+                  <CheckCircle2 className="mt-0.5 h-[18px] w-[18px] shrink-0 text-[var(--aqua-glow)]" />
                   <span>{it}</span>
                 </li>
               ))}
