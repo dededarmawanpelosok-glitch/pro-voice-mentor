@@ -273,7 +273,10 @@ function HeroVisual() {
       </div>
 
       {/* Floating progress ring card */}
-      <div className="glass-card absolute -left-4 bottom-10 hidden w-56 rounded-2xl p-4 sm:block">
+      <div
+        className="glass-card absolute -left-4 bottom-10 hidden w-56 rounded-2xl p-4 sm:block"
+        style={{ transform: "translateZ(60px)" }}
+      >
         <div className="flex items-center gap-3">
           <ProgressRing value={86} />
           <div>
