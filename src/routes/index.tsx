@@ -135,11 +135,23 @@ function LogoMark() {
 
 /* ───────────── HERO ───────────── */
 function Hero() {
+  const y = useScrollY();
   return (
     <section className="ambient-bg relative overflow-hidden">
-      {/* glow blobs */}
-      <div className="pointer-events-none absolute -top-32 left-1/2 h-[520px] w-[820px] -translate-x-1/2 rounded-full bg-[radial-gradient(closest-side,rgba(0,163,255,0.18),transparent_70%)]" />
-      <div className="pointer-events-none absolute right-[-10%] top-40 h-[420px] w-[420px] rounded-full bg-[radial-gradient(closest-side,rgba(0,229,255,0.18),transparent_70%)]" />
+      {/* glow blobs — parallax */}
+      <div
+        className="pointer-events-none absolute -top-32 left-1/2 h-[520px] w-[820px] -translate-x-1/2 rounded-full bg-[radial-gradient(closest-side,rgba(0,163,255,0.22),transparent_70%)] will-change-transform"
+        style={{ transform: `translate3d(-50%, ${y * 0.35}px, 0)` }}
+      />
+      <div
+        className="pointer-events-none absolute right-[-10%] top-40 h-[420px] w-[420px] rounded-full bg-[radial-gradient(closest-side,rgba(0,229,255,0.22),transparent_70%)] will-change-transform"
+        style={{ transform: `translate3d(0, ${y * -0.25}px, 0)` }}
+      />
+      <div
+        className="pointer-events-none absolute -bottom-24 left-[-8%] h-[360px] w-[360px] rounded-full bg-[radial-gradient(closest-side,rgba(0,163,255,0.18),transparent_70%)] will-change-transform"
+        style={{ transform: `translate3d(0, ${y * 0.2}px, 0)` }}
+      />
+
 
       <div className="relative mx-auto grid max-w-7xl gap-14 px-5 pt-16 pb-20 sm:px-8 lg:grid-cols-[1.05fr_1fr] lg:gap-10 lg:pt-24 lg:pb-28">
         {/* LEFT */}
