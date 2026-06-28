@@ -223,7 +223,7 @@ function HeroVisual() {
 
       {/* Soundwave rings behind */}
       <svg
-        className="absolute inset-0 h-full w-full"
+        className="absolute inset-0 h-full w-full animate-spin-slow"
         viewBox="0 0 500 600"
         fill="none"
         aria-hidden
