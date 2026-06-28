@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useEffect, useRef, useState } from "react";
 import {
   Mic,
   Calendar,
@@ -20,7 +21,43 @@ import {
 } from "lucide-react";
 import heroAsset from "@/assets/hero-pro.png.asset.json";
 import coachAsset from "@/assets/coach-faisal.jpg.asset.json";
+import logoAsset from "@/assets/speaking-pro-logo.png.asset.json";
 import { RegistrationForm } from "@/components/RegistrationForm";
+
+/* Scroll-based parallax: returns window scrollY */
+function useScrollY() {
+  const [y, setY] = useState(0);
+  useEffect(() => {
+    const onScroll = () => setY(window.scrollY);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+  return y;
+}
+
+/* Mouse-driven 3D tilt */
+function useTilt<T extends HTMLElement>(maxDeg = 10) {
+  const ref = useRef<T | null>(null);
+  const [t, setT] = useState({ rx: 0, ry: 0 });
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const onMove = (e: MouseEvent) => {
+      const r = el.getBoundingClientRect();
+      const px = (e.clientX - r.left) / r.width - 0.5;
+      const py = (e.clientY - r.top) / r.height - 0.5;
+      setT({ ry: px * maxDeg * 2, rx: -py * maxDeg * 2 });
+    };
+    const onLeave = () => setT({ rx: 0, ry: 0 });
+    el.addEventListener("mousemove", onMove);
+    el.addEventListener("mouseleave", onLeave);
+    return () => {
+      el.removeEventListener("mousemove", onMove);
+      el.removeEventListener("mouseleave", onLeave);
+    };
+  }, [maxDeg]);
+  return { ref, transform: `perspective(1200px) rotateX(${t.rx}deg) rotateY(${t.ry}deg)` };
+}
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -61,22 +98,16 @@ function Landing() {
 function Navbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-[rgba(0,163,255,0.08)] bg-white/75 backdrop-blur-xl">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-8">
-        <a href="#" className="flex items-center gap-2.5">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-3.5 sm:px-8">
+        <a href="#" className="group flex items-center gap-3">
           <LogoMark />
-          <span className="font-display text-lg font-bold tracking-tight text-[var(--navy)]">
+          <span className="font-display text-lg font-bold tracking-tight text-[var(--navy)] sm:text-xl">
             Speaking Pro<span className="text-[var(--cyan-brand)]">™</span>
           </span>
         </a>
-        <nav className="hidden items-center gap-8 text-sm font-medium text-slate-600 md:flex">
-          <a href="#problem" className="transition hover:text-[var(--navy)]">Masalah</a>
-          <a href="#how" className="transition hover:text-[var(--navy)]">Cara Kerja</a>
-          <a href="#audience" className="transition hover:text-[var(--navy)]">Untuk Siapa</a>
-          <a href="#pricing" className="transition hover:text-[var(--navy)]">Harga</a>
-        </nav>
         <a
           href="#pricing"
-          className="btn-gradient hidden rounded-full px-5 py-2.5 text-xs font-semibold tracking-wide md:inline-flex"
+          className="btn-gradient rounded-full px-5 py-2.5 text-xs font-semibold tracking-wide"
         >
           Daftar Beta
         </a>
@@ -87,19 +118,40 @@ function Navbar() {
 
 function LogoMark() {
   return (
-    <div className="relative grid h-9 w-9 place-items-center rounded-xl bg-gradient-to-br from-[var(--cyan-brand)] to-[var(--aqua-glow)] shadow-[0_8px_24px_-8px_rgba(0,163,255,0.55)]">
-      <Mic className="h-[18px] w-[18px] text-white" strokeWidth={2.5} />
+    <div
+      className="relative h-11 w-11 shrink-0"
+      style={{ perspective: "600px" }}
+    >
+      <div className="absolute inset-0 rounded-2xl bg-[radial-gradient(closest-side,rgba(0,163,255,0.45),transparent_70%)] blur-md" />
+      <img
+        src={logoAsset.url}
+        alt="Speaking Pro logo"
+        className="relative h-full w-full object-contain drop-shadow-[0_8px_20px_rgba(0,163,255,0.45)] transition-transform duration-500 will-change-transform group-hover:[transform:rotateY(20deg)_rotateX(-6deg)_scale(1.08)]"
+        style={{ transformStyle: "preserve-3d" }}
+      />
     </div>
   );
 }
 
 /* ───────────── HERO ───────────── */
 function Hero() {
+  const y = useScrollY();
   return (
     <section className="ambient-bg relative overflow-hidden">
-      {/* glow blobs */}
-      <div className="pointer-events-none absolute -top-32 left-1/2 h-[520px] w-[820px] -translate-x-1/2 rounded-full bg-[radial-gradient(closest-side,rgba(0,163,255,0.18),transparent_70%)]" />
-      <div className="pointer-events-none absolute right-[-10%] top-40 h-[420px] w-[420px] rounded-full bg-[radial-gradient(closest-side,rgba(0,229,255,0.18),transparent_70%)]" />
+      {/* glow blobs — parallax */}
+      <div
+        className="pointer-events-none absolute -top-32 left-1/2 h-[520px] w-[820px] -translate-x-1/2 rounded-full bg-[radial-gradient(closest-side,rgba(0,163,255,0.22),transparent_70%)] will-change-transform"
+        style={{ transform: `translate3d(-50%, ${y * 0.35}px, 0)` }}
+      />
+      <div
+        className="pointer-events-none absolute right-[-10%] top-40 h-[420px] w-[420px] rounded-full bg-[radial-gradient(closest-side,rgba(0,229,255,0.22),transparent_70%)] will-change-transform"
+        style={{ transform: `translate3d(0, ${y * -0.25}px, 0)` }}
+      />
+      <div
+        className="pointer-events-none absolute -bottom-24 left-[-8%] h-[360px] w-[360px] rounded-full bg-[radial-gradient(closest-side,rgba(0,163,255,0.18),transparent_70%)] will-change-transform"
+        style={{ transform: `translate3d(0, ${y * 0.2}px, 0)` }}
+      />
+
 
       <div className="relative mx-auto grid max-w-7xl gap-14 px-5 pt-16 pb-20 sm:px-8 lg:grid-cols-[1.05fr_1fr] lg:gap-10 lg:pt-24 lg:pb-28">
         {/* LEFT */}
@@ -161,11 +213,17 @@ function Hero() {
 }
 
 function HeroVisual() {
+  const tilt = useTilt<HTMLDivElement>(9);
   return (
-    <div className="relative mx-auto aspect-[5/6] w-full max-w-[560px]">
+    <div
+      ref={tilt.ref}
+      className="relative mx-auto aspect-[5/6] w-full max-w-[560px] transition-transform duration-200 ease-out will-change-transform"
+      style={{ transform: tilt.transform, transformStyle: "preserve-3d" }}
+    >
+
       {/* Soundwave rings behind */}
       <svg
-        className="absolute inset-0 h-full w-full"
+        className="absolute inset-0 h-full w-full animate-spin-slow"
         viewBox="0 0 500 600"
         fill="none"
         aria-hidden
@@ -215,7 +273,10 @@ function HeroVisual() {
       </div>
 
       {/* Floating progress ring card */}
-      <div className="glass-card absolute -left-4 bottom-10 hidden w-56 rounded-2xl p-4 sm:block">
+      <div
+        className="glass-card absolute -left-4 bottom-10 hidden w-56 rounded-2xl p-4 sm:block"
+        style={{ transform: "translateZ(60px)" }}
+      >
         <div className="flex items-center gap-3">
           <ProgressRing value={86} />
           <div>
@@ -231,7 +292,10 @@ function HeroVisual() {
       </div>
 
       {/* Floating session badge */}
-      <div className="glass-card absolute -right-3 top-8 hidden items-center gap-3 rounded-2xl p-3 pr-4 sm:flex">
+      <div
+        className="glass-card absolute -right-3 top-8 hidden items-center gap-3 rounded-2xl p-3 pr-4 sm:flex"
+        style={{ transform: "translateZ(80px)" }}
+      >
         <div className="grid h-10 w-10 place-items-center rounded-xl bg-gradient-to-br from-[var(--cyan-brand)] to-[var(--aqua-glow)] text-white">
           <Mic className="h-[18px] w-[18px]" />
         </div>

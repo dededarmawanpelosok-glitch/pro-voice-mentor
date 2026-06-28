@@ -130,3 +130,25 @@
     radial-gradient(700px 480px at 85% 30%, rgba(0, 229, 255, 0.06), transparent 60%),
     radial-gradient(900px 600px at 50% 90%, rgba(0, 163, 255, 0.04), transparent 65%);
 }
+
+@keyframes float-y {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+@keyframes float-y-lg {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-18px); }
+}
+@keyframes spin-slow {
+  to { transform: rotate(360deg); }
+}
+
+@utility animate-float {
+  animation: float-y 6s ease-in-out infinite;
+}
+@utility animate-float-lg {
+  animation: float-y-lg 8s ease-in-out infinite;
+}
+@utility animate-spin-slow {
+  animation: spin-slow 30s linear infinite;
+}
