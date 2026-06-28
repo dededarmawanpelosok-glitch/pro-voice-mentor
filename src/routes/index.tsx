@@ -292,7 +292,10 @@ function HeroVisual() {
       </div>
 
       {/* Floating session badge */}
-      <div className="glass-card absolute -right-3 top-8 hidden items-center gap-3 rounded-2xl p-3 pr-4 sm:flex">
+      <div
+        className="glass-card absolute -right-3 top-8 hidden items-center gap-3 rounded-2xl p-3 pr-4 sm:flex"
+        style={{ transform: "translateZ(80px)" }}
+      >
         <div className="grid h-10 w-10 place-items-center rounded-xl bg-gradient-to-br from-[var(--cyan-brand)] to-[var(--aqua-glow)] text-white">
           <Mic className="h-[18px] w-[18px]" />
         </div>
