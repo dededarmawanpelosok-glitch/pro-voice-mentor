@@ -110,8 +110,6 @@
   color: white;
   box-shadow: 0 10px 30px -10px rgba(0, 163, 255, 0.55), 0 0 0 1px rgba(0, 229, 255, 0.2) inset;
   transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
-}
-@utility btn-gradient {
   &:hover {
     transform: translateY(-1px) scale(1.02);
     box-shadow: 0 18px 40px -12px rgba(0, 163, 255, 0.7), 0 0 0 1px rgba(0, 229, 255, 0.3) inset;
