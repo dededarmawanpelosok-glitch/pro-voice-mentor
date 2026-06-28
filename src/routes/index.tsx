@@ -213,8 +213,14 @@ function Hero() {
 }
 
 function HeroVisual() {
+  const tilt = useTilt<HTMLDivElement>(9);
   return (
-    <div className="relative mx-auto aspect-[5/6] w-full max-w-[560px]">
+    <div
+      ref={tilt.ref}
+      className="relative mx-auto aspect-[5/6] w-full max-w-[560px] transition-transform duration-200 ease-out will-change-transform"
+      style={{ transform: tilt.transform, transformStyle: "preserve-3d" }}
+    >
+
       {/* Soundwave rings behind */}
       <svg
         className="absolute inset-0 h-full w-full"
