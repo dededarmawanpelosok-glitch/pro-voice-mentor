@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useEffect, useRef, useState } from "react";
 import {
   Mic,
   Calendar,
@@ -20,7 +21,43 @@ import {
 } from "lucide-react";
 import heroAsset from "@/assets/hero-pro.png.asset.json";
 import coachAsset from "@/assets/coach-faisal.jpg.asset.json";
+import logoAsset from "@/assets/speaking-pro-logo.png.asset.json";
 import { RegistrationForm } from "@/components/RegistrationForm";
+
+/* Scroll-based parallax: returns window scrollY */
+function useScrollY() {
+  const [y, setY] = useState(0);
+  useEffect(() => {
+    const onScroll = () => setY(window.scrollY);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+  return y;
+}
+
+/* Mouse-driven 3D tilt */
+function useTilt<T extends HTMLElement>(maxDeg = 10) {
+  const ref = useRef<T | null>(null);
+  const [t, setT] = useState({ rx: 0, ry: 0 });
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const onMove = (e: MouseEvent) => {
+      const r = el.getBoundingClientRect();
+      const px = (e.clientX - r.left) / r.width - 0.5;
+      const py = (e.clientY - r.top) / r.height - 0.5;
+      setT({ ry: px * maxDeg * 2, rx: -py * maxDeg * 2 });
+    };
+    const onLeave = () => setT({ rx: 0, ry: 0 });
+    el.addEventListener("mousemove", onMove);
+    el.addEventListener("mouseleave", onLeave);
+    return () => {
+      el.removeEventListener("mousemove", onMove);
+      el.removeEventListener("mouseleave", onLeave);
+    };
+  }, [maxDeg]);
+  return { ref, transform: `perspective(1200px) rotateX(${t.rx}deg) rotateY(${t.ry}deg)` };
+}
 
 export const Route = createFileRoute("/")({
   head: () => ({
