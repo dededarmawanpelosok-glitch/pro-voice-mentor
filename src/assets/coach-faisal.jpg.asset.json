@@ -1,11 +1,6 @@
 {
   "version": 1,
-  "asset_id": "e8f922b4-c7fc-42db-af58-11058862b478",
-  "project_id": "865c73e8-3304-4108-a600-df393fa884e2",
-  "url": "/__l5e/assets-v1/e8f922b4-c7fc-42db-af58-11058862b478/coach-faisal.jpg",
-  "r2_key": "a/v1/865c73e8-3304-4108-a600-df393fa884e2/e8f922b4-c7fc-42db-af58-11058862b478/coach-faisal.jpg",
+  "url": "/img/coach-faisal.jpg",
   "original_filename": "coach-faisal.jpg",
-  "size": 92837,
-  "content_type": "image/jpeg",
-  "created_at": "2026-06-28T16:41:09Z"
+  "content_type": "image/jpeg"
 }
