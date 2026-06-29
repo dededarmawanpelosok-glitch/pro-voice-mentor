@@ -839,7 +839,7 @@ function Pricing() {
                 />
               </div>
               <p className="mt-3 text-xs text-white/60">
-                6 slot sudah terisi · Prioritas diberikan berdasarkan urutan pendaftaran.
+                9 slot sudah terisi · Prioritas diberikan berdasarkan urutan pendaftaran.
               </p>
             </div>
 
