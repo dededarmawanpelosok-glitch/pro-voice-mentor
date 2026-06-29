@@ -744,7 +744,7 @@ function Audience() {
 
 /* ───────────── PRICING ───────────── */
 function Pricing() {
-  const filled = 6;
+  const filled = 9;
   const total = 50;
   const pct = (filled / total) * 100;
 
