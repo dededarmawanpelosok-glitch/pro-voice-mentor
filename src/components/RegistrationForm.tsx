@@ -19,7 +19,7 @@ export function RegistrationForm({ variant = "light", compact = false }: Props) 
     if (!nama.trim() || !email.trim() || !wa.trim()) return;
     setSubmitting(true);
     const text = `Halo Admin, saya ingin Daftar Pre-Order Speaking Pro.\nNama: ${nama}\nEmail: ${email}\nWA: ${wa}`;
-    const url = `https://wa.me/+6281802128907?text=${encodeURIComponent(text)}`;
+    const url = `https://wa.me/6285930006425?text=${encodeURIComponent(text)}`;
     window.open(url, "_blank", "noopener,noreferrer");
     setTimeout(() => setSubmitting(false), 1200);
   }
