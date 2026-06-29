@@ -165,12 +165,11 @@ function Hero() {
           </span>
 
           <h1 className="mt-6 font-display text-[2.6rem] font-extrabold leading-[1.05] tracking-tight text-[var(--navy)] sm:text-5xl lg:text-[3.6rem]">
-            Karena Public Speaking
+            Public Speaking
             <br />
             Tidak Dipelajari.
             <br />
-            Public Speaking{" "}
-            <span className="text-gradient-brand">Dilatih.</span>
+            Public Speaking <span className="text-gradient-brand">Dilatih.</span>
           </h1>
 
           <p className="mt-5 max-w-xl text-base text-slate-600 sm:text-lg">
