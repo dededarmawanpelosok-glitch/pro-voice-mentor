@@ -796,19 +796,6 @@ function AuthorityBlock() {
   );
 }
 
-function AudienceSectionEnd() {
-  return null;
-}
-
-// (Audience section closing wrapper below is intentionally left alone)
-function _unused_marker_after_authority() {
-  return (
-    <>
-      <div />
-      <div />
-    </section>
-  );
-}
 
 /* ───────────── PRICING ───────────── */
 function Pricing() {
