@@ -19,8 +19,8 @@ import {
   Clock,
   Lock,
 } from "lucide-react";
-import heroAsset from "@/assets/hero-pro.png.asset.json";
-import coachAsset from "@/assets/coach-faisal.jpg.asset.json";
+import heroAsset from "@/assets/hero-pro.webp.asset.json";
+import forYouAsset from "@/assets/for-you.webp.asset.json";
 import logoAsset from "@/assets/speaking-pro-logo.png.asset.json";
 import { RegistrationForm } from "@/components/RegistrationForm";
 
