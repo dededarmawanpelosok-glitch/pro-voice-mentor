@@ -686,58 +686,126 @@ function Audience() {
           ))}
         </div>
 
-        {/* Authority block */}
-        <div className="relative mt-16 overflow-hidden rounded-[32px] border border-[rgba(0,163,255,0.15)] bg-gradient-to-br from-white via-white to-[rgba(0,163,255,0.04)] p-8 sm:p-10">
-          <div className="grid items-center gap-8 lg:grid-cols-[auto_1fr]">
-            <div className="relative mx-auto h-44 w-44 shrink-0 overflow-hidden rounded-[28px] ring-1 ring-[rgba(0,163,255,0.2)] sm:h-56 sm:w-56">
-              <img
-                src={coachAsset.url}
-                alt="Coach Faisal Maulana"
-                className="h-full w-full object-cover"
-              />
-              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[var(--navy)]/85 to-transparent p-3">
-                <div className="text-[10px] font-semibold uppercase tracking-wider text-[var(--aqua-glow)]">
-                  Lead Coach
-                </div>
-                <div className="font-display text-sm font-bold text-white">Faisal Maulana</div>
-              </div>
-            </div>
+        {/* Authority block — blended parallax image, no card frame */}
+        <AuthorityBlock />
+      </div>
+    </section>
+  );
+}
 
-            <div>
-              <span className="inline-flex items-center gap-2 rounded-full border border-[rgba(0,163,255,0.25)] bg-[rgba(0,163,255,0.06)] px-3 py-1.5 text-[10px] font-semibold uppercase tracking-wider text-[var(--cyan-brand)]">
-                <ShieldCheck className="h-3 w-3" />
-                Benchmark Framework
-              </span>
-              <h3 className="mt-4 font-display text-2xl font-extrabold leading-tight text-[var(--navy)] sm:text-3xl">
-                Framework Public Speaking PRO yang teruji.
-              </h3>
-              <p className="mt-3 text-slate-600">
-                Dibangun berbasis <span className="font-semibold text-[var(--navy)]">Bloom's Taxonomy</span>,{" "}
-                <span className="font-semibold text-[var(--navy)]">Kirkpatrick Training Model</span>, dan pengalaman{" "}
-                <span className="font-semibold text-[var(--navy)]">18+ tahun</span> Coach Faisal mendampingi lebih dari{" "}
-                <span className="font-semibold text-[var(--navy)]">100.000+ peserta</span>.
-              </p>
+function AuthorityBlock() {
+  const ref = useRef<HTMLDivElement | null>(null);
+  const [offset, setOffset] = useState(0);
 
-              <div className="mt-5 grid gap-3 sm:grid-cols-3">
-                {[
-                  { icon: BookOpen, t: "Bloom's Taxonomy", s: "Tingkatan kognitif latihan" },
-                  { icon: Target, t: "Kirkpatrick Model", s: "Evaluasi 4 level dampak" },
-                  { icon: Award, t: "18+ Tahun", s: "100.000+ peserta terdampingi" },
-                ].map(({ icon: Icon, t, s }) => (
-                  <div
-                    key={t}
-                    className="rounded-2xl border border-slate-100 bg-white p-4"
-                  >
-                    <Icon className="h-5 w-5 text-[var(--cyan-brand)]" />
-                    <div className="mt-2 text-sm font-bold text-[var(--navy)]">{t}</div>
-                    <div className="text-xs text-slate-500">{s}</div>
-                  </div>
-                ))}
+  useEffect(() => {
+    const onScroll = () => {
+      const el = ref.current;
+      if (!el) return;
+      const rect = el.getBoundingClientRect();
+      const vh = window.innerHeight || 1;
+      // progress: 0 when section enters viewport bottom, 1 when it exits top
+      const progress = 1 - (rect.top + rect.height / 2) / vh;
+      setOffset(progress);
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+    };
+  }, []);
+
+  // "Tenggelam" (sink) effect: as user scrolls, image translates down and fades.
+  const translateY = Math.max(-40, Math.min(160, offset * 140));
+  const opacity = Math.max(0.15, Math.min(1, 1 - Math.max(0, offset - 0.4) * 1.2));
+  const scale = Math.max(0.94, 1 - Math.max(0, offset - 0.3) * 0.08);
+
+  return (
+    <div ref={ref} className="relative mt-20 overflow-visible">
+      <div className="grid items-center gap-8 lg:grid-cols-2">
+        {/* Blended, frameless parallax image */}
+        <div className="relative order-2 lg:order-1">
+          <div
+            className="relative aspect-[4/3] w-full will-change-transform"
+            style={{
+              transform: `translate3d(0, ${translateY}px, 0) scale(${scale})`,
+              opacity,
+              transition: "transform 120ms linear, opacity 200ms linear",
+            }}
+          >
+            <img
+              src={forYouAsset.url}
+              alt="Coach Faisal Maulana berinteraksi dengan peserta Speaking PRO"
+              className="h-full w-full object-contain"
+              style={{
+                WebkitMaskImage:
+                  "radial-gradient(ellipse at center, black 55%, transparent 95%)",
+                maskImage:
+                  "radial-gradient(ellipse at center, black 55%, transparent 95%)",
+              }}
+              loading="lazy"
+            />
+            {/* soft ambient glow behind image */}
+            <div
+              aria-hidden
+              className="pointer-events-none absolute inset-0 -z-10 blur-3xl"
+              style={{
+                background:
+                  "radial-gradient(60% 55% at 50% 55%, rgba(0,163,255,0.18), transparent 70%)",
+              }}
+            />
+          </div>
+        </div>
+
+        {/* Content */}
+        <div className="order-1 lg:order-2">
+          <span className="inline-flex items-center gap-2 rounded-full border border-[rgba(0,163,255,0.25)] bg-[rgba(0,163,255,0.06)] px-3 py-1.5 text-[10px] font-semibold uppercase tracking-wider text-[var(--cyan-brand)]">
+            <ShieldCheck className="h-3 w-3" />
+            Benchmark Framework
+          </span>
+          <h3 className="mt-4 font-display text-2xl font-extrabold leading-tight text-[var(--navy)] sm:text-3xl">
+            Framework Public Speaking PRO yang teruji.
+          </h3>
+          <p className="mt-3 text-slate-600">
+            Dibangun berbasis <span className="font-semibold text-[var(--navy)]">Bloom's Taxonomy</span>,{" "}
+            <span className="font-semibold text-[var(--navy)]">Kirkpatrick Training Model</span>, dan pengalaman{" "}
+            <span className="font-semibold text-[var(--navy)]">18+ tahun</span> Coach Faisal mendampingi lebih dari{" "}
+            <span className="font-semibold text-[var(--navy)]">100.000+ peserta</span>.
+          </p>
+
+          <div className="mt-5 grid gap-3 sm:grid-cols-3">
+            {[
+              { icon: BookOpen, t: "Bloom's Taxonomy", s: "Tingkatan kognitif latihan" },
+              { icon: Target, t: "Kirkpatrick Model", s: "Evaluasi 4 level dampak" },
+              { icon: Award, t: "18+ Tahun", s: "100.000+ peserta terdampingi" },
+            ].map(({ icon: Icon, t, s }) => (
+              <div
+                key={t}
+                className="rounded-2xl border border-slate-100 bg-white/70 p-4 backdrop-blur"
+              >
+                <Icon className="h-5 w-5 text-[var(--cyan-brand)]" />
+                <div className="mt-2 text-sm font-bold text-[var(--navy)]">{t}</div>
+                <div className="text-xs text-slate-500">{s}</div>
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
+    </div>
+  );
+}
+
+function AudienceSectionEnd() {
+  return null;
+}
+
+// (Audience section closing wrapper below is intentionally left alone)
+function _unused_marker_after_authority() {
+  return (
+    <>
+      <div />
+      <div />
     </section>
   );
 }
