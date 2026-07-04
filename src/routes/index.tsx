@@ -124,7 +124,7 @@ function LogoMark() {
     >
       <div className="absolute inset-0 rounded-2xl bg-[radial-gradient(closest-side,rgba(0,163,255,0.45),transparent_70%)] blur-md" />
       <img
-        src={logoAsset.url}
+        src={(logoAsset as { url: string }).url}
         alt="Speaking Pro logo"
         className="relative h-full w-full object-contain drop-shadow-[0_8px_20px_rgba(0,163,255,0.45)] transition-transform duration-500 will-change-transform group-hover:[transform:rotateY(20deg)_rotateX(-6deg)_scale(1.08)]"
         style={{ transformStyle: "preserve-3d" }}
