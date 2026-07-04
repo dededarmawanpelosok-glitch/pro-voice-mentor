@@ -1,11 +1,3 @@
 {
-  "version": 1,
-  "asset_id": "6408c07d-cc4d-489d-bd8a-04ad6443fef6",
-  "project_id": "865c73e8-3304-4108-a600-df393fa884e2",
-  "url": "/__l5e/assets-v1/6408c07d-cc4d-489d-bd8a-04ad6443fef6/speaking-pro-logo.png",
-  "r2_key": "a/v1/865c73e8-3304-4108-a600-df393fa884e2/6408c07d-cc4d-489d-bd8a-04ad6443fef6/speaking-pro-logo.png",
-  "original_filename": "speaking-pro-logo.png",
-  "size": 62124,
-  "content_type": "image/png",
-  "created_at": "2026-07-04T00:53:53Z"
+  "url": "/img/speaking-pro-logo.png"
 }
