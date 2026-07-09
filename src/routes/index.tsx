@@ -799,7 +799,7 @@ function AuthorityBlock() {
 
 /* ───────────── PRICING ───────────── */
 function Pricing() {
-  const filled = 13;
+  const filled = 25;
   const total = 50;
   const pct = (filled / total) * 100;
 
@@ -894,7 +894,7 @@ function Pricing() {
                 />
               </div>
               <p className="mt-3 text-xs text-white/60">
-                13 slot sudah terisi · Prioritas diberikan berdasarkan urutan pendaftaran.
+                25 slot sudah terisi · Prioritas diberikan berdasarkan urutan pendaftaran.
               </p>
             </div>
 
