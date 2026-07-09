@@ -686,7 +686,7 @@ function Audience() {
           ))}
         </div>
 
-        {/* Authority block — blended parallax image, no card frame */}
+        {/* Authority block — clean, professional card frame */}
         <AuthorityBlock />
       </div>
     </section>
