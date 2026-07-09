@@ -694,67 +694,22 @@ function Audience() {
 }
 
 function AuthorityBlock() {
-  const ref = useRef<HTMLDivElement | null>(null);
-  const [offset, setOffset] = useState(0);
-
-  useEffect(() => {
-    const onScroll = () => {
-      const el = ref.current;
-      if (!el) return;
-      const rect = el.getBoundingClientRect();
-      const vh = window.innerHeight || 1;
-      // progress: 0 when section enters viewport bottom, 1 when it exits top
-      const progress = 1 - (rect.top + rect.height / 2) / vh;
-      setOffset(progress);
-    };
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    window.addEventListener("resize", onScroll);
-    return () => {
-      window.removeEventListener("scroll", onScroll);
-      window.removeEventListener("resize", onScroll);
-    };
-  }, []);
-
-  // "Tenggelam" (sink) effect: as user scrolls, image translates down and fades.
-  const translateY = Math.max(-40, Math.min(160, offset * 140));
-  const opacity = Math.max(0.15, Math.min(1, 1 - Math.max(0, offset - 0.4) * 1.2));
-  const scale = Math.max(0.94, 1 - Math.max(0, offset - 0.3) * 0.08);
-
   return (
-    <div ref={ref} className="relative mt-20 overflow-visible">
-      <div className="grid items-center gap-8 lg:grid-cols-2">
-        {/* Blended, frameless parallax image */}
+    <div className="relative mt-20">
+      <div className="grid items-center gap-10 lg:grid-cols-2">
+        {/* Professional framed image */}
         <div className="relative order-2 lg:order-1">
-          <div
-            className="relative aspect-[4/3] w-full will-change-transform"
-            style={{
-              transform: `translate3d(0, ${translateY}px, 0) scale(${scale})`,
-              opacity,
-              transition: "transform 120ms linear, opacity 200ms linear",
-            }}
-          >
-            <img
-              src={forYouAsset.url}
-              alt="Coach Faisal Maulana berinteraksi dengan peserta Speaking PRO"
-              className="h-full w-full object-contain"
-              style={{
-                WebkitMaskImage:
-                  "radial-gradient(ellipse at center, black 55%, transparent 95%)",
-                maskImage:
-                  "radial-gradient(ellipse at center, black 55%, transparent 95%)",
-              }}
-              loading="lazy"
-            />
-            {/* soft ambient glow behind image */}
-            <div
-              aria-hidden
-              className="pointer-events-none absolute inset-0 -z-10 blur-3xl"
-              style={{
-                background:
-                  "radial-gradient(60% 55% at 50% 55%, rgba(0,163,255,0.18), transparent 70%)",
-              }}
-            />
+          <div className="relative rounded-[28px] border border-slate-200/80 bg-white p-3 shadow-[0_24px_60px_-24px_rgba(13,33,71,0.18)]">
+            <div className="relative overflow-hidden rounded-[20px] bg-slate-100 aspect-[16/9]">
+              <img
+                src={forYouAsset.url}
+                alt="Coach Faisal Maulana berinteraksi dengan peserta Speaking PRO"
+                className="h-full w-full object-cover"
+                loading="lazy"
+              />
+            </div>
+            {/* precision corner accent */}
+            <div className="pointer-events-none absolute -bottom-px -right-px h-16 w-16 rounded-tl-[28px] rounded-br-[28px] border-l border-t border-white/40 bg-gradient-to-br from-[var(--cyan-brand)] to-[var(--aqua-glow)]" />
           </div>
         </div>
 
