@@ -754,7 +754,7 @@ function AuthorityBlock() {
 
 /* ───────────── PRICING ───────────── */
 function Pricing() {
-  const filled = 25;
+  const filled = 26;
   const total = 50;
   const pct = (filled / total) * 100;
 
@@ -840,7 +840,7 @@ function Pricing() {
                   Terbatas Hanya untuk 50 Peserta
                 </span>
                 <span className="text-[var(--aqua-glow)]">
-                  {filled}/{total} slot terisi
+                  {filled}/{total} SLOT TERISI
                 </span>
               </div>
               <div className="mt-3 h-2 w-full overflow-hidden rounded-full bg-white/10">
@@ -850,7 +850,7 @@ function Pricing() {
                 />
               </div>
               <p className="mt-3 text-xs text-white/60">
-                25 slot sudah terisi · Prioritas diberikan berdasarkan urutan pendaftaran.
+                26 slot sudah terisi · Prioritas diberikan berdasarkan urutan pendaftaran.
               </p>
             </div>
 
