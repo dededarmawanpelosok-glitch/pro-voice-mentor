@@ -62,7 +62,7 @@ function useTilt<T extends HTMLElement>(maxDeg = 10) {
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Speaking Pro™ — Latihan Public Speaking Terstruktur dengan AI & Coach Faisal" },
+      { title: "Speaking Pro™ — The First AI-Powered Public Speaking Platform in Indonesia" },
       {
         name: "description",
         content:
@@ -88,6 +88,7 @@ function Landing() {
       <Problem />
       <HowItWorks />
       <Audience />
+      <Team />
       <Pricing />
       <Footer />
     </main>
@@ -156,26 +157,32 @@ function Hero() {
       <div className="relative mx-auto grid max-w-7xl gap-14 px-5 pt-16 pb-20 sm:px-8 lg:grid-cols-[1.05fr_1fr] lg:gap-10 lg:pt-24 lg:pb-28">
         {/* LEFT */}
         <div className="flex flex-col">
-          <span className="inline-flex w-fit items-center gap-2 rounded-full border border-[rgba(0,163,255,0.25)] bg-[rgba(0,163,255,0.07)] px-4 py-2 text-[11px] font-semibold tracking-wide text-[var(--navy)] backdrop-blur">
+          <span className="inline-flex w-fit flex-wrap items-center gap-x-2 gap-y-1 rounded-full border border-[rgba(0,163,255,0.25)] bg-white/80 px-4 py-2 text-[11px] font-semibold tracking-wide text-[var(--navy)] backdrop-blur">
             <Sparkles className="h-3.5 w-3.5 text-[var(--cyan-brand)]" />
-            <span className="bg-gradient-to-r from-[var(--cyan-brand)] to-[var(--aqua-glow)] bg-clip-text text-transparent">
-              The First AI-Powered Public Speaking Platform
+            <span className="text-[var(--navy)]">
+              The First AI-Powered Public Speaking Platform in Indonesia
             </span>
-            <span className="hidden sm:inline">in Indonesia · Coach Faisal Maulana × AI Mentor</span>
+            <span className="hidden sm:inline text-slate-400">·</span>
+            <span className="hidden sm:inline bg-gradient-to-r from-[var(--cyan-brand)] to-[var(--aqua-glow)] bg-clip-text text-transparent">
+              Coach Faisal Maulana × AI Mentor
+            </span>
           </span>
 
-          <h1 className="mt-6 font-display text-[2.6rem] font-extrabold leading-[1.05] tracking-tight text-[var(--navy)] sm:text-5xl lg:text-[3.6rem]">
+          <h1 className="mt-6 font-display text-[2.4rem] font-extrabold leading-[1.05] tracking-tight text-[var(--navy)] sm:text-5xl lg:text-[3.4rem]">
             Public Speaking
             <br />
-            Tidak Dipelajari.
+            Tidak Hanya Dipelajari
             <br />
-            Public Speaking <span className="text-gradient-brand">Dilatih.</span>
+            Tetapi <span className="text-gradient-brand">Harus Dilatih</span>
           </h1>
 
           <p className="mt-5 max-w-xl text-base text-slate-600 sm:text-lg">
-            Latihan <span className="font-semibold text-[var(--navy)]">10 Menit per Hari</span>.
-            Feedback <span className="font-semibold text-[var(--navy)]">Setiap Minggu</span>.
-            Perubahan yang <span className="font-semibold text-[var(--navy)]">Terukur</span>.
+            <span className="font-semibold text-[var(--navy)]">Latihan Setiap Hari.</span>{" "}
+            <span className="font-semibold text-[var(--navy)]">Evaluasi Setiap Minggu.</span>{" "}
+            <span className="font-semibold text-[var(--navy)]">Laporan Transformasi Setiap Bulan.</span>
+          </p>
+          <p className="mt-3 text-sm font-semibold uppercase tracking-[0.18em] text-[var(--cyan-brand)]">
+            Exclusive — Affordable — Real Transformation
           </p>
 
           <div className="glass-card mt-8 rounded-3xl p-5 sm:p-6">
@@ -403,12 +410,12 @@ function HowItWorks() {
             How It Works
           </span>
           <h2 className="mt-5 font-display text-3xl font-extrabold tracking-tight text-[var(--navy)] sm:text-[2.6rem]">
-            Sistem Terstruktur dalam{" "}
-            <span className="text-gradient-brand">Genggaman Anda</span>
+            Sistem dalam <span className="text-gradient-brand">Genggaman Anda</span>
           </h2>
           <p className="mt-5 text-slate-600 sm:text-lg">
-            Tiga komponen yang dirancang bekerja sinergis — disiplin harian, evaluasi mingguan,
-            dan analitik presisi.
+            Sinergi tiga komponen utama — <span className="font-semibold text-[var(--navy)]">Latihan Setiap Hari</span>.{" "}
+            <span className="font-semibold text-[var(--navy)]">Evaluasi Setiap Minggu</span>.{" "}
+            <span className="font-semibold text-[var(--navy)]">Laporan Transformasi Setiap Bulan</span>.
           </p>
         </div>
 
@@ -720,24 +727,29 @@ function AuthorityBlock() {
             Benchmark Framework
           </span>
           <h3 className="mt-4 font-display text-2xl font-extrabold leading-tight text-[var(--navy)] sm:text-3xl">
-            Framework Public Speaking PRO yang teruji.
+            Framework <span className="text-gradient-brand">SPEAKING PRO</span> berstandar Internasional
           </h3>
           <p className="mt-3 text-slate-600">
-            Dibangun berbasis <span className="font-semibold text-[var(--navy)]">Bloom's Taxonomy</span>,{" "}
-            <span className="font-semibold text-[var(--navy)]">Kirkpatrick Training Model</span>, dan pengalaman{" "}
-            <span className="font-semibold text-[var(--navy)]">18+ tahun</span> Coach Faisal mendampingi lebih dari{" "}
-            <span className="font-semibold text-[var(--navy)]">100.000+ peserta</span>.
+            Dibangun dari pengalaman <span className="font-semibold text-[var(--navy)]">COACH FAISAL MAULANA</span> selama{" "}
+            <span className="font-semibold text-[var(--navy)]">18+ tahun</span> sebagai praktisi public speaking
+            yang telah menangani <span className="font-semibold text-[var(--navy)]">200+ Perusahaan Nasional,
+            Multi-Nasional & Kementerian Republik Indonesia</span> serta secara total telah berbicara di depan{" "}
+            <span className="font-semibold text-[var(--navy)]">100.000+ Peserta</span> secara offline.
           </p>
 
-          <div className="mt-5 grid gap-3 sm:grid-cols-3">
+          <div className="mt-6 text-[11px] font-semibold uppercase tracking-wider text-[var(--cyan-brand)]">
+            Dilengkapi oleh AI MENTOR yang menerapkan:
+          </div>
+          <div className="mt-3 grid gap-3 sm:grid-cols-2">
             {[
-              { icon: BookOpen, t: "Bloom's Taxonomy", s: "Tingkatan kognitif latihan" },
-              { icon: Target, t: "Kirkpatrick Model", s: "Evaluasi 4 level dampak" },
-              { icon: Award, t: "18+ Tahun", s: "100.000+ peserta terdampingi" },
+              { icon: BookOpen, t: "24 Buku Best-Seller Internasional", s: "Referensi communication skill kelas dunia" },
+              { icon: BookOpen, t: "12 Buku Best-Seller Indonesia", s: "Wawasan konteks lokal & budaya" },
+              { icon: Target, t: "15 Jurnal & Penelitian", s: "Riset nasional & internasional terkurasi" },
+              { icon: Award, t: "18+ Tahun Coach Faisal", s: "200+ perusahaan · 100.000+ peserta" },
             ].map(({ icon: Icon, t, s }) => (
               <div
                 key={t}
-                className="rounded-2xl border border-slate-100 bg-white/70 p-4 backdrop-blur"
+                className="rounded-2xl border border-slate-100 bg-white/80 p-4 backdrop-blur"
               >
                 <Icon className="h-5 w-5 text-[var(--cyan-brand)]" />
                 <div className="mt-2 text-sm font-bold text-[var(--navy)]">{t}</div>
@@ -745,9 +757,132 @@ function AuthorityBlock() {
               </div>
             ))}
           </div>
+          <p className="mt-4 text-xs italic text-slate-500">
+            "Seluruhnya berkaitan dengan peningkatan communication skill secara umum & public speaking skill secara khusus."
+          </p>
         </div>
       </div>
     </div>
+  );
+}
+
+
+/* ───────────── TEAM ───────────── */
+const TEAM = [
+  {
+    name: "Faisal Maulana, CPC®, CFFL®, CRMO®",
+    role: "Founder & CEO",
+    exp: "18+ Years Public Speaking Experience",
+    img: "/img/team/faisal.webp",
+  },
+  {
+    name: "Dede Darmawan",
+    role: "Co-Founder & CMO",
+    exp: "6 Years Specialist Branding",
+    img: "/img/team/dede.webp",
+  },
+  {
+    name: "Raka Tegar Wicaksono, S.Pd",
+    role: "CTO",
+    exp: "2+ Years Apps & AI Development",
+    img: "/img/team/raka.webp",
+  },
+  {
+    name: "Dita Maulani, S.S.",
+    role: "Product Development & Learning Consultant",
+    exp: "18+ Years Teaching Experience",
+    img: "/img/team/dita.webp",
+  },
+  {
+    name: "Gami Suhendra, S.E.",
+    role: "Customer Experience & Sales Consultant",
+    exp: "25+ Years Business Development Experience",
+    img: "/img/team/gami.webp",
+  },
+];
+
+function Team() {
+  return (
+    <section id="team" className="relative py-24 sm:py-28">
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-[rgba(0,163,255,0.05)] to-transparent" />
+      <div className="relative mx-auto max-w-7xl px-5 sm:px-8">
+        <div className="mx-auto max-w-3xl text-center">
+          <span className="inline-flex items-center gap-2 rounded-full border border-[rgba(0,163,255,0.25)] bg-[rgba(0,163,255,0.06)] px-3.5 py-1.5 text-[11px] font-semibold uppercase tracking-wider text-[var(--cyan-brand)]">
+            <Users className="h-3.5 w-3.5" />
+            Meet The Team
+          </span>
+          <h2 className="mt-5 font-display text-3xl font-extrabold tracking-tight text-[var(--navy)] sm:text-[2.6rem]">
+            Tim di Balik <span className="text-gradient-brand">SPEAKING PRO™</span>
+          </h2>
+          <p className="mt-5 text-slate-600 sm:text-lg">
+            Praktisi berpengalaman yang membangun standar baru pelatihan public speaking di Indonesia —
+            perpaduan keahlian coaching, teknologi AI, edukasi, dan pengembangan bisnis.
+          </p>
+        </div>
+
+        {/* Featured founder */}
+        <div className="mt-14 grid gap-6 lg:grid-cols-[1.05fr_1fr] lg:items-stretch">
+          <TeamFeaturedCard member={TEAM[0]} />
+          <div className="grid gap-4 sm:grid-cols-2">
+            {TEAM.slice(1, 5).map((m) => (
+              <TeamCard key={m.name} member={m} />
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+type Member = { name: string; role: string; exp: string; img: string };
+
+function TeamFeaturedCard({ member }: { member: Member }) {
+  return (
+    <article className="group relative overflow-hidden rounded-[28px] border border-slate-100 bg-white shadow-[0_24px_60px_-30px_rgba(13,33,71,0.35)]">
+      <div className="relative aspect-[4/5] overflow-hidden bg-slate-100 sm:aspect-[4/4] lg:aspect-auto lg:h-full">
+        <img
+          src={member.img}
+          alt={member.name}
+          className="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-[1.04]"
+          loading="lazy"
+        />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#0D2147]/85 via-[#0D2147]/25 to-transparent" />
+        <div className="absolute inset-x-0 bottom-0 p-6 sm:p-8 text-white">
+          <span className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-[var(--aqua-glow)] backdrop-blur">
+            <Sparkles className="h-3 w-3" />
+            {member.role}
+          </span>
+          <h3 className="mt-3 font-display text-2xl font-extrabold leading-tight sm:text-3xl">
+            {member.name}
+          </h3>
+          <p className="mt-2 text-sm text-white/80 sm:text-base">{member.exp}</p>
+        </div>
+      </div>
+    </article>
+  );
+}
+
+function TeamCard({ member }: { member: Member }) {
+  return (
+    <article className="group flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white transition hover:-translate-y-1 hover:border-[rgba(0,163,255,0.35)] hover:shadow-[0_18px_40px_-20px_rgba(0,163,255,0.5)]">
+      <div className="relative aspect-square overflow-hidden bg-slate-100">
+        <img
+          src={member.img}
+          alt={member.name}
+          className="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-[1.05]"
+          loading="lazy"
+        />
+      </div>
+      <div className="flex flex-1 flex-col p-5">
+        <span className="text-[10px] font-semibold uppercase tracking-wider text-[var(--cyan-brand)]">
+          {member.role}
+        </span>
+        <h3 className="mt-1.5 font-display text-base font-bold leading-snug text-[var(--navy)]">
+          {member.name}
+        </h3>
+        <p className="mt-1.5 text-xs text-slate-500">{member.exp}</p>
+      </div>
+    </article>
   );
 }
 
@@ -822,9 +957,15 @@ function Pricing() {
                   <span className="text-sm sm:text-base text-white/60">/ orang</span>
                 </div>
               </div>
-              <div className="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-2 text-xs text-white/70">
-                <Clock className="h-3.5 w-3.5 shrink-0 text-[var(--aqua-glow)]" />
-                Program dimulai Juli 2026
+              <div className="flex flex-col gap-2">
+                <span className="inline-flex items-center gap-2 rounded-full border border-[var(--aqua-glow)]/40 bg-[var(--aqua-glow)]/10 px-3 py-2 text-[11px] font-bold uppercase tracking-wider text-[var(--aqua-glow)]">
+                  <Calendar className="h-3.5 w-3.5 shrink-0" />
+                  Program 30 Hari · 1 Bulan Penuh
+                </span>
+                <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-2 text-xs text-white/70">
+                  <Clock className="h-3.5 w-3.5 shrink-0 text-[var(--aqua-glow)]" />
+                  Program dimulai Juli 2026
+                </span>
               </div>
             </div>
 
@@ -890,7 +1031,7 @@ function Footer() {
           </span>
         </div>
         <p className="text-xs text-slate-500">
-          © {new Date().getFullYear()} Speaking Pro™ — Latihan Public Speaking Terstruktur.
+          © {new Date().getFullYear()} Speaking Pro™ — The First AI-Powered Public Speaking Platform in Indonesia.
         </p>
       </div>
     </footer>
