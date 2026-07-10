@@ -767,6 +767,126 @@ function AuthorityBlock() {
 }
 
 
+/* ───────────── TEAM ───────────── */
+const TEAM = [
+  {
+    name: "Faisal Maulana, CPC®, CFFL®, CRMO®",
+    role: "Founder & CEO",
+    exp: "18+ Years Public Speaking Experience",
+    img: "/img/team/faisal.webp",
+  },
+  {
+    name: "Dede Darmawan",
+    role: "Co-Founder & CMO",
+    exp: "6 Years Specialist Branding",
+    img: "/img/team/dede.webp",
+  },
+  {
+    name: "Raka Tegar Wicaksono, S.Pd",
+    role: "CTO",
+    exp: "2+ Years Apps & AI Development",
+    img: "/img/team/raka.webp",
+  },
+  {
+    name: "Dita Maulani, S.S.",
+    role: "Product Development & Learning Consultant",
+    exp: "18+ Years Teaching Experience",
+    img: "/img/team/dita.webp",
+  },
+  {
+    name: "Gami Suhendra, S.E.",
+    role: "Customer Experience & Sales Consultant",
+    exp: "25+ Years Business Development Experience",
+    img: "/img/team/gami.webp",
+  },
+];
+
+function Team() {
+  return (
+    <section id="team" className="relative py-24 sm:py-28">
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-[rgba(0,163,255,0.05)] to-transparent" />
+      <div className="relative mx-auto max-w-7xl px-5 sm:px-8">
+        <div className="mx-auto max-w-3xl text-center">
+          <span className="inline-flex items-center gap-2 rounded-full border border-[rgba(0,163,255,0.25)] bg-[rgba(0,163,255,0.06)] px-3.5 py-1.5 text-[11px] font-semibold uppercase tracking-wider text-[var(--cyan-brand)]">
+            <Users className="h-3.5 w-3.5" />
+            Meet The Team
+          </span>
+          <h2 className="mt-5 font-display text-3xl font-extrabold tracking-tight text-[var(--navy)] sm:text-[2.6rem]">
+            Tim di Balik <span className="text-gradient-brand">SPEAKING PRO™</span>
+          </h2>
+          <p className="mt-5 text-slate-600 sm:text-lg">
+            Praktisi berpengalaman yang membangun standar baru pelatihan public speaking di Indonesia —
+            perpaduan keahlian coaching, teknologi AI, edukasi, dan pengembangan bisnis.
+          </p>
+        </div>
+
+        {/* Featured founder */}
+        <div className="mt-14 grid gap-6 lg:grid-cols-[1.05fr_1fr] lg:items-stretch">
+          <TeamFeaturedCard member={TEAM[0]} />
+          <div className="grid gap-4 sm:grid-cols-2">
+            {TEAM.slice(1, 5).map((m) => (
+              <TeamCard key={m.name} member={m} />
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+type Member = { name: string; role: string; exp: string; img: string };
+
+function TeamFeaturedCard({ member }: { member: Member }) {
+  return (
+    <article className="group relative overflow-hidden rounded-[28px] border border-slate-100 bg-white shadow-[0_24px_60px_-30px_rgba(13,33,71,0.35)]">
+      <div className="relative aspect-[4/5] overflow-hidden bg-slate-100 sm:aspect-[4/4] lg:aspect-auto lg:h-full">
+        <img
+          src={member.img}
+          alt={member.name}
+          className="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-[1.04]"
+          loading="lazy"
+        />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#0D2147]/85 via-[#0D2147]/25 to-transparent" />
+        <div className="absolute inset-x-0 bottom-0 p-6 sm:p-8 text-white">
+          <span className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-[var(--aqua-glow)] backdrop-blur">
+            <Sparkles className="h-3 w-3" />
+            {member.role}
+          </span>
+          <h3 className="mt-3 font-display text-2xl font-extrabold leading-tight sm:text-3xl">
+            {member.name}
+          </h3>
+          <p className="mt-2 text-sm text-white/80 sm:text-base">{member.exp}</p>
+        </div>
+      </div>
+    </article>
+  );
+}
+
+function TeamCard({ member }: { member: Member }) {
+  return (
+    <article className="group flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white transition hover:-translate-y-1 hover:border-[rgba(0,163,255,0.35)] hover:shadow-[0_18px_40px_-20px_rgba(0,163,255,0.5)]">
+      <div className="relative aspect-square overflow-hidden bg-slate-100">
+        <img
+          src={member.img}
+          alt={member.name}
+          className="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-[1.05]"
+          loading="lazy"
+        />
+      </div>
+      <div className="flex flex-1 flex-col p-5">
+        <span className="text-[10px] font-semibold uppercase tracking-wider text-[var(--cyan-brand)]">
+          {member.role}
+        </span>
+        <h3 className="mt-1.5 font-display text-base font-bold leading-snug text-[var(--navy)]">
+          {member.name}
+        </h3>
+        <p className="mt-1.5 text-xs text-slate-500">{member.exp}</p>
+      </div>
+    </article>
+  );
+}
+
+
 /* ───────────── PRICING ───────────── */
 function Pricing() {
   const filled = 26;
