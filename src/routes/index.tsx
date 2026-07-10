@@ -837,9 +837,15 @@ function Pricing() {
                   <span className="text-sm sm:text-base text-white/60">/ orang</span>
                 </div>
               </div>
-              <div className="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-2 text-xs text-white/70">
-                <Clock className="h-3.5 w-3.5 shrink-0 text-[var(--aqua-glow)]" />
-                Program dimulai Juli 2026
+              <div className="flex flex-col gap-2">
+                <span className="inline-flex items-center gap-2 rounded-full border border-[var(--aqua-glow)]/40 bg-[var(--aqua-glow)]/10 px-3 py-2 text-[11px] font-bold uppercase tracking-wider text-[var(--aqua-glow)]">
+                  <Calendar className="h-3.5 w-3.5 shrink-0" />
+                  Program 30 Hari · 1 Bulan Penuh
+                </span>
+                <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-2 text-xs text-white/70">
+                  <Clock className="h-3.5 w-3.5 shrink-0 text-[var(--aqua-glow)]" />
+                  Program dimulai Juli 2026
+                </span>
               </div>
             </div>
 
