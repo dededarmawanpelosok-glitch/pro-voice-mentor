@@ -88,6 +88,7 @@ function Landing() {
       <Problem />
       <HowItWorks />
       <Audience />
+      <Team />
       <Pricing />
       <Footer />
     </main>
