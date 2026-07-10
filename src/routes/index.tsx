@@ -62,7 +62,7 @@ function useTilt<T extends HTMLElement>(maxDeg = 10) {
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Speaking Pro™ — Latihan Public Speaking Terstruktur dengan AI & Coach Faisal" },
+      { title: "Speaking Pro™ — The First AI-Powered Public Speaking Platform in Indonesia" },
       {
         name: "description",
         content:
