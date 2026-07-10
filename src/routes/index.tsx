@@ -157,26 +157,32 @@ function Hero() {
       <div className="relative mx-auto grid max-w-7xl gap-14 px-5 pt-16 pb-20 sm:px-8 lg:grid-cols-[1.05fr_1fr] lg:gap-10 lg:pt-24 lg:pb-28">
         {/* LEFT */}
         <div className="flex flex-col">
-          <span className="inline-flex w-fit items-center gap-2 rounded-full border border-[rgba(0,163,255,0.25)] bg-[rgba(0,163,255,0.07)] px-4 py-2 text-[11px] font-semibold tracking-wide text-[var(--navy)] backdrop-blur">
+          <span className="inline-flex w-fit flex-wrap items-center gap-x-2 gap-y-1 rounded-full border border-[rgba(0,163,255,0.25)] bg-white/80 px-4 py-2 text-[11px] font-semibold tracking-wide text-[var(--navy)] backdrop-blur">
             <Sparkles className="h-3.5 w-3.5 text-[var(--cyan-brand)]" />
-            <span className="bg-gradient-to-r from-[var(--cyan-brand)] to-[var(--aqua-glow)] bg-clip-text text-transparent">
-              The First AI-Powered Public Speaking Platform
+            <span className="text-[var(--navy)]">
+              The First AI-Powered Public Speaking Platform in Indonesia
             </span>
-            <span className="hidden sm:inline">in Indonesia · Coach Faisal Maulana × AI Mentor</span>
+            <span className="hidden sm:inline text-slate-400">·</span>
+            <span className="hidden sm:inline bg-gradient-to-r from-[var(--cyan-brand)] to-[var(--aqua-glow)] bg-clip-text text-transparent">
+              Coach Faisal Maulana × AI Mentor
+            </span>
           </span>
 
-          <h1 className="mt-6 font-display text-[2.6rem] font-extrabold leading-[1.05] tracking-tight text-[var(--navy)] sm:text-5xl lg:text-[3.6rem]">
+          <h1 className="mt-6 font-display text-[2.4rem] font-extrabold leading-[1.05] tracking-tight text-[var(--navy)] sm:text-5xl lg:text-[3.4rem]">
             Public Speaking
             <br />
-            Tidak Dipelajari.
+            Tidak Hanya Dipelajari
             <br />
-            Public Speaking <span className="text-gradient-brand">Dilatih.</span>
+            Tetapi <span className="text-gradient-brand">Harus Dilatih</span>
           </h1>
 
           <p className="mt-5 max-w-xl text-base text-slate-600 sm:text-lg">
-            Latihan <span className="font-semibold text-[var(--navy)]">10 Menit per Hari</span>.
-            Feedback <span className="font-semibold text-[var(--navy)]">Setiap Minggu</span>.
-            Perubahan yang <span className="font-semibold text-[var(--navy)]">Terukur</span>.
+            <span className="font-semibold text-[var(--navy)]">Latihan Setiap Hari.</span>{" "}
+            <span className="font-semibold text-[var(--navy)]">Evaluasi Setiap Minggu.</span>{" "}
+            <span className="font-semibold text-[var(--navy)]">Laporan Transformasi Setiap Bulan.</span>
+          </p>
+          <p className="mt-3 text-sm font-semibold uppercase tracking-[0.18em] text-[var(--cyan-brand)]">
+            Exclusive — Affordable — Real Transformation
           </p>
 
           <div className="glass-card mt-8 rounded-3xl p-5 sm:p-6">
