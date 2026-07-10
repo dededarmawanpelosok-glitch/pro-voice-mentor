@@ -911,7 +911,7 @@ function Footer() {
           </span>
         </div>
         <p className="text-xs text-slate-500">
-          © {new Date().getFullYear()} Speaking Pro™ — Latihan Public Speaking Terstruktur.
+          © {new Date().getFullYear()} Speaking Pro™ — The First AI-Powered Public Speaking Platform in Indonesia.
         </p>
       </div>
     </footer>
