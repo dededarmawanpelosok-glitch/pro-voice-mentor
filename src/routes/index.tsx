@@ -727,24 +727,29 @@ function AuthorityBlock() {
             Benchmark Framework
           </span>
           <h3 className="mt-4 font-display text-2xl font-extrabold leading-tight text-[var(--navy)] sm:text-3xl">
-            Framework Public Speaking PRO yang teruji.
+            Framework <span className="text-gradient-brand">SPEAKING PRO</span> berstandar Internasional
           </h3>
           <p className="mt-3 text-slate-600">
-            Dibangun berbasis <span className="font-semibold text-[var(--navy)]">Bloom's Taxonomy</span>,{" "}
-            <span className="font-semibold text-[var(--navy)]">Kirkpatrick Training Model</span>, dan pengalaman{" "}
-            <span className="font-semibold text-[var(--navy)]">18+ tahun</span> Coach Faisal mendampingi lebih dari{" "}
-            <span className="font-semibold text-[var(--navy)]">100.000+ peserta</span>.
+            Dibangun dari pengalaman <span className="font-semibold text-[var(--navy)]">COACH FAISAL MAULANA</span> selama{" "}
+            <span className="font-semibold text-[var(--navy)]">18+ tahun</span> sebagai praktisi public speaking
+            yang telah menangani <span className="font-semibold text-[var(--navy)]">200+ Perusahaan Nasional,
+            Multi-Nasional & Kementerian Republik Indonesia</span> serta secara total telah berbicara di depan{" "}
+            <span className="font-semibold text-[var(--navy)]">100.000+ Peserta</span> secara offline.
           </p>
 
-          <div className="mt-5 grid gap-3 sm:grid-cols-3">
+          <div className="mt-6 text-[11px] font-semibold uppercase tracking-wider text-[var(--cyan-brand)]">
+            Dilengkapi oleh AI MENTOR yang menerapkan:
+          </div>
+          <div className="mt-3 grid gap-3 sm:grid-cols-2">
             {[
-              { icon: BookOpen, t: "Bloom's Taxonomy", s: "Tingkatan kognitif latihan" },
-              { icon: Target, t: "Kirkpatrick Model", s: "Evaluasi 4 level dampak" },
-              { icon: Award, t: "18+ Tahun", s: "100.000+ peserta terdampingi" },
+              { icon: BookOpen, t: "24 Buku Best-Seller Internasional", s: "Referensi communication skill kelas dunia" },
+              { icon: BookOpen, t: "12 Buku Best-Seller Indonesia", s: "Wawasan konteks lokal & budaya" },
+              { icon: Target, t: "15 Jurnal & Penelitian", s: "Riset nasional & internasional terkurasi" },
+              { icon: Award, t: "18+ Tahun Coach Faisal", s: "200+ perusahaan · 100.000+ peserta" },
             ].map(({ icon: Icon, t, s }) => (
               <div
                 key={t}
-                className="rounded-2xl border border-slate-100 bg-white/70 p-4 backdrop-blur"
+                className="rounded-2xl border border-slate-100 bg-white/80 p-4 backdrop-blur"
               >
                 <Icon className="h-5 w-5 text-[var(--cyan-brand)]" />
                 <div className="mt-2 text-sm font-bold text-[var(--navy)]">{t}</div>
@@ -752,6 +757,9 @@ function AuthorityBlock() {
               </div>
             ))}
           </div>
+          <p className="mt-4 text-xs italic text-slate-500">
+            "Seluruhnya berkaitan dengan peningkatan communication skill secara umum & public speaking skill secara khusus."
+          </p>
         </div>
       </div>
     </div>
