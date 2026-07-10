@@ -410,12 +410,12 @@ function HowItWorks() {
             How It Works
           </span>
           <h2 className="mt-5 font-display text-3xl font-extrabold tracking-tight text-[var(--navy)] sm:text-[2.6rem]">
-            Sistem Terstruktur dalam{" "}
-            <span className="text-gradient-brand">Genggaman Anda</span>
+            Sistem dalam <span className="text-gradient-brand">Genggaman Anda</span>
           </h2>
           <p className="mt-5 text-slate-600 sm:text-lg">
-            Tiga komponen yang dirancang bekerja sinergis — disiplin harian, evaluasi mingguan,
-            dan analitik presisi.
+            Sinergi tiga komponen utama — <span className="font-semibold text-[var(--navy)]">Latihan Setiap Hari</span>.{" "}
+            <span className="font-semibold text-[var(--navy)]">Evaluasi Setiap Minggu</span>.{" "}
+            <span className="font-semibold text-[var(--navy)]">Laporan Transformasi Setiap Bulan</span>.
           </p>
         </div>
 
