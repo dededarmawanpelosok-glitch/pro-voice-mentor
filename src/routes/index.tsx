@@ -488,9 +488,9 @@ function HowItWorks() {
           </article>
 
           {/* Audio submission */}
-          <article className="relative overflow-hidden rounded-[28px] bg-[var(--navy)] p-7 text-white">
+          <article className="relative overflow-hidden rounded-[28px] bg-[var(--navy)] p-6 text-white sm:p-7">
             <BentoLabel num="02" label="Weekly Audio Submission" dark />
-            <h3 className="mt-4 font-display text-2xl font-bold leading-tight">
+            <h3 className="mt-4 font-display text-xl font-bold leading-tight sm:text-2xl">
               1 rekaman seminggu.
               <br />
               <span className="text-gradient-brand">100% privat.</span>
@@ -498,6 +498,7 @@ function HowItWorks() {
             <p className="mt-3 text-sm text-white/70">
               Kirimkan rekaman suara latihan terbaik Anda. Data sepenuhnya aman & rahasia.
             </p>
+
 
             <div className="mt-6 rounded-2xl border border-white/10 bg-white/[0.04] p-4">
               <div className="flex items-center justify-between text-[10px] font-semibold uppercase tracking-wider text-white/60">
