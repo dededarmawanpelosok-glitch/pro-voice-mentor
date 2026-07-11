@@ -914,7 +914,7 @@ function Pricing() {
   return (
     <section
       id="pricing"
-      className="relative overflow-hidden py-24 sm:py-28"
+      className="relative overflow-hidden py-20 sm:py-28"
       style={{ background: "#0D2147" }}
     >
       {/* glow background */}
@@ -923,26 +923,27 @@ function Pricing() {
         <div className="absolute -bottom-40 right-[-10%] h-[420px] w-[420px] rounded-full bg-[radial-gradient(closest-side,rgba(0,163,255,0.18),transparent_70%)]" />
       </div>
 
-      <div className="relative mx-auto max-w-5xl px-5 sm:px-8">
+      <div className="relative mx-auto max-w-5xl px-4 sm:px-8">
         <div className="mx-auto max-w-3xl text-center">
           <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3.5 py-1.5 text-[11px] font-semibold uppercase tracking-wider text-[var(--aqua-glow)] backdrop-blur">
             <Sparkles className="h-3.5 w-3.5" />
             Beta Program Launch Price
           </span>
-          <h2 className="mt-5 font-display text-3xl font-extrabold tracking-tight text-white sm:text-[2.6rem]">
+          <h2 className="mt-5 font-display text-[1.75rem] font-extrabold leading-tight tracking-tight text-white sm:text-[2.6rem]">
             Investasi Terbaik untuk
             <br className="hidden sm:block" />{" "}
             <span className="text-gradient-brand">Keterampilan Seumur Hidup.</span>
           </h2>
-          <p className="mt-5 text-white/70 sm:text-lg">
+          <p className="mt-4 text-[15px] text-white/70 sm:mt-5 sm:text-lg">
             Slot beta terbatas. Prioritas berdasarkan urutan pendaftaran.
           </p>
         </div>
 
         {/* Card */}
-        <div className="relative mx-auto mt-12 max-w-3xl">
-          <div className="absolute -inset-px rounded-[32px] bg-gradient-to-br from-[var(--cyan-brand)] via-[var(--aqua-glow)] to-[var(--cyan-brand)] opacity-70 blur-md" />
-          <div className="relative rounded-[32px] border border-white/10 bg-[#0A192F]/95 p-5 sm:p-10 backdrop-blur-xl">
+        <div className="relative mx-auto mt-10 max-w-3xl sm:mt-12">
+          <div className="absolute -inset-px rounded-[28px] bg-gradient-to-br from-[var(--cyan-brand)] via-[var(--aqua-glow)] to-[var(--cyan-brand)] opacity-70 blur-md sm:rounded-[32px]" />
+          <div className="relative rounded-[24px] border border-white/10 bg-[#0A192F]/95 p-5 backdrop-blur-xl sm:rounded-[32px] sm:p-10">
+
             <div className="flex flex-wrap items-start justify-between gap-3">
               <div className="min-w-0">
                 <div className="text-[11px] font-semibold uppercase tracking-wider text-[var(--aqua-glow)]">
