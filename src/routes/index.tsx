@@ -855,16 +855,17 @@ function TeamFeaturedCard({ member }: { member: Member }) {
           loading="lazy"
         />
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#0D2147]/85 via-[#0D2147]/25 to-transparent" />
-        <div className="absolute inset-x-0 bottom-0 p-6 sm:p-8 text-white">
-          <span className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-[var(--aqua-glow)] backdrop-blur">
+        <div className="absolute inset-x-0 bottom-0 p-5 sm:p-8 text-white">
+          <span className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[var(--aqua-glow)] backdrop-blur">
             <Sparkles className="h-3 w-3" />
             {member.role}
           </span>
-          <h3 className="mt-3 font-display text-2xl font-extrabold leading-tight sm:text-3xl">
+          <h3 className="mt-2.5 font-display text-xl font-extrabold leading-tight sm:mt-3 sm:text-3xl">
             {member.name}
           </h3>
-          <p className="mt-2 text-sm text-white/80 sm:text-base">{member.exp}</p>
+          <p className="mt-1.5 text-xs text-white/80 sm:mt-2 sm:text-base">{member.exp}</p>
         </div>
+
       </div>
     </article>
   );
