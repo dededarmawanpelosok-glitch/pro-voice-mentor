@@ -708,12 +708,12 @@ function Audience() {
 
 function AuthorityBlock() {
   return (
-    <div className="relative mt-20">
-      <div className="grid items-center gap-10 lg:grid-cols-2">
+    <div className="relative mt-14 sm:mt-20">
+      <div className="grid items-center gap-8 sm:gap-10 lg:grid-cols-2">
         {/* Professional framed image */}
         <div className="relative order-2 lg:order-1">
-          <div className="relative rounded-[28px] border border-slate-200/80 bg-white p-3 shadow-[0_24px_60px_-24px_rgba(13,33,71,0.18)]">
-            <div className="relative overflow-hidden rounded-[20px] bg-slate-100 aspect-[16/9]">
+          <div className="relative rounded-[24px] border border-slate-200/80 bg-white p-2.5 shadow-[0_24px_60px_-24px_rgba(13,33,71,0.18)] sm:rounded-[28px] sm:p-3">
+            <div className="relative overflow-hidden rounded-[18px] bg-slate-100 aspect-[16/9] sm:rounded-[20px]">
               <img
                 src={forYouAsset.url}
                 alt="Coach Faisal Maulana berinteraksi dengan peserta Speaking PRO"
@@ -722,7 +722,7 @@ function AuthorityBlock() {
               />
             </div>
             {/* precision corner accent */}
-            <div className="pointer-events-none absolute -bottom-px -right-px h-16 w-16 rounded-tl-[28px] rounded-br-[28px] border-l border-t border-white/40 bg-gradient-to-br from-[var(--cyan-brand)] to-[var(--aqua-glow)]" />
+            <div className="pointer-events-none absolute -bottom-px -right-px h-12 w-12 rounded-tl-[24px] rounded-br-[24px] border-l border-t border-white/40 bg-gradient-to-br from-[var(--cyan-brand)] to-[var(--aqua-glow)] sm:h-16 sm:w-16 sm:rounded-tl-[28px] sm:rounded-br-[28px]" />
           </div>
         </div>
 
@@ -732,16 +732,17 @@ function AuthorityBlock() {
             <ShieldCheck className="h-3 w-3" />
             Benchmark Framework
           </span>
-          <h3 className="mt-4 font-display text-2xl font-extrabold leading-tight text-[var(--navy)] sm:text-3xl">
+          <h3 className="mt-4 font-display text-xl font-extrabold leading-tight text-[var(--navy)] sm:text-3xl">
             Framework <span className="text-gradient-brand">SPEAKING PRO</span> berstandar Internasional
           </h3>
-          <p className="mt-3 text-slate-600">
+          <p className="mt-3 text-sm text-slate-600 sm:text-base">
             Dibangun dari pengalaman <span className="font-semibold text-[var(--navy)]">COACH FAISAL MAULANA</span> selama{" "}
             <span className="font-semibold text-[var(--navy)]">18+ tahun</span> sebagai praktisi public speaking
             yang telah menangani <span className="font-semibold text-[var(--navy)]">200+ Perusahaan Nasional,
             Multi-Nasional & Kementerian Republik Indonesia</span> serta secara total telah berbicara di depan{" "}
             <span className="font-semibold text-[var(--navy)]">100.000+ Peserta</span> secara offline.
           </p>
+
 
           <div className="mt-6 text-[11px] font-semibold uppercase tracking-wider text-[var(--cyan-brand)]">
             Dilengkapi oleh AI MENTOR yang menerapkan:
