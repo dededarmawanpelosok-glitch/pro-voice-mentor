@@ -958,16 +958,17 @@ function Pricing() {
               </span>
             </div>
 
-            <div className="mt-7 flex flex-wrap items-end gap-4">
+            <div className="mt-6 flex flex-col gap-4 sm:mt-7 sm:flex-row sm:flex-wrap sm:items-end">
               <div className="min-w-0">
-                <div className="text-sm text-white/50 line-through">Rp 150.000</div>
+                <div className="text-xs text-white/50 line-through sm:text-sm">Rp 150.000</div>
                 <div className="mt-1 flex flex-wrap items-baseline gap-x-2 gap-y-1">
-                  <span className="font-display text-4xl sm:text-6xl font-extrabold leading-none whitespace-nowrap">
+                  <span className="font-display text-[2.5rem] font-extrabold leading-none whitespace-nowrap sm:text-6xl">
                     <span className="text-gradient-brand">Rp 75.000</span>
                   </span>
-                  <span className="text-sm sm:text-base text-white/60">/ orang</span>
+                  <span className="text-sm text-white/60 sm:text-base">/ orang</span>
                 </div>
               </div>
+
               <div className="flex flex-col gap-2">
                 <span className="inline-flex items-center gap-2 rounded-full border border-[var(--aqua-glow)]/40 bg-[var(--aqua-glow)]/10 px-3 py-2 text-[11px] font-bold uppercase tracking-wider text-[var(--aqua-glow)]">
                   <Calendar className="h-3.5 w-3.5 shrink-0" />
