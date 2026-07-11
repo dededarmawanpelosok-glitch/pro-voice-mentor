@@ -99,20 +99,21 @@ function Landing() {
 function Navbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-[rgba(0,163,255,0.08)] bg-white/75 backdrop-blur-xl">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-3.5 sm:px-8">
-        <a href="#" className="group flex items-center gap-3">
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-3 sm:px-8 sm:py-3.5">
+        <a href="#" className="group flex min-w-0 items-center gap-2.5 sm:gap-3">
           <LogoMark />
-          <span className="font-display text-lg font-bold tracking-tight text-[var(--navy)] sm:text-xl">
+          <span className="truncate font-display text-base font-bold tracking-tight text-[var(--navy)] sm:text-xl">
             Speaking Pro<span className="text-[var(--cyan-brand)]">™</span>
           </span>
         </a>
         <a
           href="#pricing"
-          className="btn-gradient rounded-full px-5 py-2.5 text-xs font-semibold tracking-wide"
+          className="btn-gradient shrink-0 rounded-full px-4 py-2 text-[11px] font-semibold tracking-wide sm:px-5 sm:py-2.5 sm:text-xs"
         >
           Daftar Beta
         </a>
       </div>
+
     </header>
   );
 }
