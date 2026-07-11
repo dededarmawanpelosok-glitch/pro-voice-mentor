@@ -361,39 +361,40 @@ function Problem() {
   ];
 
   return (
-    <section id="problem" className="relative py-24 sm:py-28">
-      <div className="mx-auto max-w-6xl px-5 sm:px-8">
+    <section id="problem" className="relative py-20 sm:py-28">
+      <div className="mx-auto max-w-6xl px-4 sm:px-8">
         <div className="mx-auto max-w-3xl text-center">
           <span className="inline-flex items-center gap-2 rounded-full border border-[rgba(231,106,106,0.25)] bg-[rgba(231,106,106,0.08)] px-3.5 py-1.5 text-[11px] font-semibold tracking-wider text-[var(--soft-red)] uppercase">
             The Real Problem
           </span>
-          <h2 className="mt-5 font-display text-3xl font-extrabold tracking-tight text-[var(--navy)] sm:text-[2.6rem]">
+          <h2 className="mt-5 font-display text-[1.75rem] font-extrabold leading-tight tracking-tight text-[var(--navy)] sm:text-[2.6rem]">
             Mengapa Kemampuan Berbicara Anda
             <br className="hidden sm:block" /> Jalan di Tempat?
           </h2>
-          <p className="mt-5 text-slate-600 sm:text-lg">
+          <p className="mt-4 text-[15px] text-slate-600 sm:mt-5 sm:text-lg">
             Banyak orang sudah ikut training, membaca buku, dan menonton video.
             Namun saat berbicara di depan umum, masalah ini tetap muncul:
           </p>
         </div>
 
-        <div className="mt-14 grid gap-5 md:grid-cols-3">
+        <div className="mt-10 grid gap-4 sm:mt-14 sm:gap-5 md:grid-cols-3">
           {items.map((it, i) => (
             <article
               key={i}
-              className="group relative rounded-3xl border border-slate-100 bg-white p-7 transition hover:-translate-y-1 hover:border-[rgba(231,106,106,0.25)] hover:shadow-[0_20px_50px_-25px_rgba(231,106,106,0.45)]"
+              className="group relative rounded-3xl border border-slate-100 bg-white p-6 transition hover:-translate-y-1 hover:border-[rgba(231,106,106,0.25)] hover:shadow-[0_20px_50px_-25px_rgba(231,106,106,0.45)] sm:p-7"
             >
-              <div className="grid h-12 w-12 place-items-center rounded-2xl bg-[rgba(231,106,106,0.08)] text-[var(--soft-red)]">
+              <div className="grid h-11 w-11 place-items-center rounded-2xl bg-[rgba(231,106,106,0.08)] text-[var(--soft-red)] sm:h-12 sm:w-12">
                 <XCircle className="h-6 w-6" strokeWidth={2.2} />
               </div>
-              <h3 className="mt-5 font-display text-lg font-bold text-[var(--navy)]">{it.title}</h3>
-              <p className="mt-2.5 text-sm leading-relaxed text-slate-600">{it.desc}</p>
-              <div className="mt-6 text-[11px] font-semibold uppercase tracking-wider text-slate-400">
+              <h3 className="mt-4 font-display text-lg font-bold text-[var(--navy)] sm:mt-5">{it.title}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-slate-600 sm:mt-2.5">{it.desc}</p>
+              <div className="mt-5 text-[11px] font-semibold uppercase tracking-wider text-slate-400 sm:mt-6">
                 #{(i + 1).toString().padStart(2, "0")} · Pain Point
               </div>
             </article>
           ))}
         </div>
+
       </div>
     </section>
   );
