@@ -1018,12 +1018,13 @@ function Pricing() {
             </ul>
 
             {/* Form */}
-            <div className="mt-8 rounded-2xl border border-white/10 bg-white/[0.04] p-5 sm:p-6">
-              <div className="mb-4 text-xs font-semibold uppercase tracking-wider text-[var(--aqua-glow)]">
+            <div className="mt-7 rounded-2xl border border-white/10 bg-white/[0.04] p-4 sm:mt-8 sm:p-6">
+              <div className="mb-3 text-[11px] font-semibold uppercase tracking-wider text-[var(--aqua-glow)] sm:mb-4 sm:text-xs">
                 Kunci Slot Anda Sekarang
               </div>
               <RegistrationForm variant="dark" />
             </div>
+
           </div>
         </div>
       </div>
