@@ -882,15 +882,16 @@ function TeamCard({ member }: { member: Member }) {
           loading="lazy"
         />
       </div>
-      <div className="flex flex-1 flex-col p-5">
+      <div className="flex flex-1 flex-col p-4 sm:p-5">
         <span className="text-[10px] font-semibold uppercase tracking-wider text-[var(--cyan-brand)]">
           {member.role}
         </span>
-        <h3 className="mt-1.5 font-display text-base font-bold leading-snug text-[var(--navy)]">
+        <h3 className="mt-1.5 font-display text-sm font-bold leading-snug text-[var(--navy)] sm:text-base">
           {member.name}
         </h3>
-        <p className="mt-1.5 text-xs text-slate-500">{member.exp}</p>
+        <p className="mt-1.5 text-[11px] text-slate-500 sm:text-xs">{member.exp}</p>
       </div>
+
     </article>
   );
 }
