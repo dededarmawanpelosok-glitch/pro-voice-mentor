@@ -508,15 +508,15 @@ function HowItWorks() {
                 </span>
                 <span>05:00 MAX</span>
               </div>
-              <div className="mt-3 flex h-12 items-end gap-[3px]">
-                {Array.from({ length: 38 }).map((_, i) => {
+              <div className="mt-3 flex h-12 items-end gap-[2px] sm:gap-[3px]">
+                {Array.from({ length: 28 }).map((_, i) => {
                   const h = 20 + Math.abs(Math.sin(i * 0.6)) * 80;
-                  const active = i < 22;
+                  const active = i < 16;
                   return (
                     <span
                       key={i}
                       style={{ height: `${h}%` }}
-                      className={`w-[3px] rounded-full ${
+                      className={`w-[3px] flex-1 rounded-full ${
                         active
                           ? "bg-gradient-to-t from-[var(--cyan-brand)] to-[var(--aqua-glow)]"
                           : "bg-white/15"
@@ -525,6 +525,7 @@ function HowItWorks() {
                   );
                 })}
               </div>
+
               <div className="mt-3 flex items-center justify-between text-[11px] font-mono text-white/60">
                 <span>02:48</span>
                 <span className="flex items-center gap-1 text-[var(--aqua-glow)]">
