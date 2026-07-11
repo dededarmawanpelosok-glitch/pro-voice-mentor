@@ -181,9 +181,6 @@ function Hero() {
             <span className="font-semibold text-[var(--navy)]">Evaluasi Setiap Minggu.</span>{" "}
             <span className="font-semibold text-[var(--navy)]">Laporan Transformasi Setiap Bulan.</span>
           </p>
-          <p className="mt-3 text-sm font-semibold uppercase tracking-[0.18em] text-[var(--cyan-brand)]">
-            Exclusive — Affordable — Real Transformation
-          </p>
 
           <div className="glass-card mt-8 rounded-3xl p-5 sm:p-6">
             <div className="mb-4 flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-[var(--navy)]">
