@@ -169,7 +169,7 @@ function Hero() {
             </span>
           </span>
 
-          <h1 className="mt-5 font-display text-[1.85rem] font-extrabold leading-[1.1] tracking-tight text-[var(--navy)] xs:text-[2.1rem] sm:mt-6 sm:text-5xl sm:leading-[1.05] lg:text-[3.4rem]">
+          <h1 className="mt-5 font-display text-[2rem] font-extrabold leading-[1.1] tracking-tight text-[var(--navy)] sm:mt-6 sm:text-5xl sm:leading-[1.05] lg:text-[3.4rem]">
             Public Speaking
             <br />
             Tidak Hanya Dipelajari
