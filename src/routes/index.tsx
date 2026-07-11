@@ -99,20 +99,21 @@ function Landing() {
 function Navbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-[rgba(0,163,255,0.08)] bg-white/75 backdrop-blur-xl">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-3.5 sm:px-8">
-        <a href="#" className="group flex items-center gap-3">
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-3 sm:px-8 sm:py-3.5">
+        <a href="#" className="group flex min-w-0 items-center gap-2.5 sm:gap-3">
           <LogoMark />
-          <span className="font-display text-lg font-bold tracking-tight text-[var(--navy)] sm:text-xl">
+          <span className="truncate font-display text-base font-bold tracking-tight text-[var(--navy)] sm:text-xl">
             Speaking Pro<span className="text-[var(--cyan-brand)]">™</span>
           </span>
         </a>
         <a
           href="#pricing"
-          className="btn-gradient rounded-full px-5 py-2.5 text-xs font-semibold tracking-wide"
+          className="btn-gradient shrink-0 rounded-full px-4 py-2 text-[11px] font-semibold tracking-wide sm:px-5 sm:py-2.5 sm:text-xs"
         >
           Daftar Beta
         </a>
       </div>
+
     </header>
   );
 }
@@ -154,11 +155,11 @@ function Hero() {
       />
 
 
-      <div className="relative mx-auto grid max-w-7xl gap-14 px-5 pt-16 pb-20 sm:px-8 lg:grid-cols-[1.05fr_1fr] lg:gap-10 lg:pt-24 lg:pb-28">
+      <div className="relative mx-auto grid max-w-7xl gap-10 px-4 pt-10 pb-16 sm:gap-14 sm:px-8 sm:pt-16 sm:pb-20 lg:grid-cols-[1.05fr_1fr] lg:gap-10 lg:pt-24 lg:pb-28">
         {/* LEFT */}
-        <div className="flex flex-col">
-          <span className="inline-flex w-fit flex-wrap items-center gap-x-2 gap-y-1 rounded-full border border-[rgba(0,163,255,0.25)] bg-white/80 px-4 py-2 text-[11px] font-semibold tracking-wide text-[var(--navy)] backdrop-blur">
-            <Sparkles className="h-3.5 w-3.5 text-[var(--cyan-brand)]" />
+        <div className="flex min-w-0 flex-col">
+          <span className="inline-flex w-fit max-w-full flex-wrap items-center gap-x-2 gap-y-1 rounded-full border border-[rgba(0,163,255,0.25)] bg-white/80 px-3 py-1.5 text-[10px] font-semibold tracking-wide text-[var(--navy)] backdrop-blur sm:px-4 sm:py-2 sm:text-[11px]">
+            <Sparkles className="h-3.5 w-3.5 shrink-0 text-[var(--cyan-brand)]" />
             <span className="text-[var(--navy)]">
               The First AI-Powered Public Speaking Platform in Indonesia
             </span>
@@ -168,7 +169,7 @@ function Hero() {
             </span>
           </span>
 
-          <h1 className="mt-6 font-display text-[2.4rem] font-extrabold leading-[1.05] tracking-tight text-[var(--navy)] sm:text-5xl lg:text-[3.4rem]">
+          <h1 className="mt-5 font-display text-[2rem] font-extrabold leading-[1.1] tracking-tight text-[var(--navy)] sm:mt-6 sm:text-5xl sm:leading-[1.05] lg:text-[3.4rem]">
             Public Speaking
             <br />
             Tidak Hanya Dipelajari
@@ -176,19 +177,20 @@ function Hero() {
             Tetapi <span className="text-gradient-brand">Harus Dilatih</span>
           </h1>
 
-          <p className="mt-5 max-w-xl text-base text-slate-600 sm:text-lg">
+          <p className="mt-4 max-w-xl text-[15px] text-slate-600 sm:mt-5 sm:text-lg">
             <span className="font-semibold text-[var(--navy)]">Latihan Setiap Hari.</span>{" "}
             <span className="font-semibold text-[var(--navy)]">Evaluasi Setiap Minggu.</span>{" "}
             <span className="font-semibold text-[var(--navy)]">Laporan Transformasi Setiap Bulan.</span>
           </p>
 
-          <div className="glass-card mt-8 rounded-3xl p-5 sm:p-6">
-            <div className="mb-4 flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-[var(--navy)]">
-              <Lock className="h-3.5 w-3.5 text-[var(--cyan-brand)]" />
-              Quick Registration — Kunci Slot Beta Anda
+          <div className="glass-card mt-7 rounded-3xl p-4 sm:mt-8 sm:p-6">
+            <div className="mb-3 flex items-center gap-2 text-[11px] font-semibold uppercase tracking-wider text-[var(--navy)] sm:mb-4 sm:text-xs">
+              <Lock className="h-3.5 w-3.5 shrink-0 text-[var(--cyan-brand)]" />
+              <span className="min-w-0">Quick Registration — Kunci Slot Beta Anda</span>
             </div>
             <RegistrationForm />
           </div>
+
 
           <div className="mt-7 flex flex-wrap items-center gap-x-6 gap-y-3 text-xs text-slate-500">
             <div className="flex items-center gap-2">
@@ -359,39 +361,40 @@ function Problem() {
   ];
 
   return (
-    <section id="problem" className="relative py-24 sm:py-28">
-      <div className="mx-auto max-w-6xl px-5 sm:px-8">
+    <section id="problem" className="relative py-20 sm:py-28">
+      <div className="mx-auto max-w-6xl px-4 sm:px-8">
         <div className="mx-auto max-w-3xl text-center">
           <span className="inline-flex items-center gap-2 rounded-full border border-[rgba(231,106,106,0.25)] bg-[rgba(231,106,106,0.08)] px-3.5 py-1.5 text-[11px] font-semibold tracking-wider text-[var(--soft-red)] uppercase">
             The Real Problem
           </span>
-          <h2 className="mt-5 font-display text-3xl font-extrabold tracking-tight text-[var(--navy)] sm:text-[2.6rem]">
+          <h2 className="mt-5 font-display text-[1.75rem] font-extrabold leading-tight tracking-tight text-[var(--navy)] sm:text-[2.6rem]">
             Mengapa Kemampuan Berbicara Anda
             <br className="hidden sm:block" /> Jalan di Tempat?
           </h2>
-          <p className="mt-5 text-slate-600 sm:text-lg">
+          <p className="mt-4 text-[15px] text-slate-600 sm:mt-5 sm:text-lg">
             Banyak orang sudah ikut training, membaca buku, dan menonton video.
             Namun saat berbicara di depan umum, masalah ini tetap muncul:
           </p>
         </div>
 
-        <div className="mt-14 grid gap-5 md:grid-cols-3">
+        <div className="mt-10 grid gap-4 sm:mt-14 sm:gap-5 md:grid-cols-3">
           {items.map((it, i) => (
             <article
               key={i}
-              className="group relative rounded-3xl border border-slate-100 bg-white p-7 transition hover:-translate-y-1 hover:border-[rgba(231,106,106,0.25)] hover:shadow-[0_20px_50px_-25px_rgba(231,106,106,0.45)]"
+              className="group relative rounded-3xl border border-slate-100 bg-white p-6 transition hover:-translate-y-1 hover:border-[rgba(231,106,106,0.25)] hover:shadow-[0_20px_50px_-25px_rgba(231,106,106,0.45)] sm:p-7"
             >
-              <div className="grid h-12 w-12 place-items-center rounded-2xl bg-[rgba(231,106,106,0.08)] text-[var(--soft-red)]">
+              <div className="grid h-11 w-11 place-items-center rounded-2xl bg-[rgba(231,106,106,0.08)] text-[var(--soft-red)] sm:h-12 sm:w-12">
                 <XCircle className="h-6 w-6" strokeWidth={2.2} />
               </div>
-              <h3 className="mt-5 font-display text-lg font-bold text-[var(--navy)]">{it.title}</h3>
-              <p className="mt-2.5 text-sm leading-relaxed text-slate-600">{it.desc}</p>
-              <div className="mt-6 text-[11px] font-semibold uppercase tracking-wider text-slate-400">
+              <h3 className="mt-4 font-display text-lg font-bold text-[var(--navy)] sm:mt-5">{it.title}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-slate-600 sm:mt-2.5">{it.desc}</p>
+              <div className="mt-5 text-[11px] font-semibold uppercase tracking-wider text-slate-400 sm:mt-6">
                 #{(i + 1).toString().padStart(2, "0")} · Pain Point
               </div>
             </article>
           ))}
         </div>
+
       </div>
     </section>
   );
@@ -400,16 +403,16 @@ function Problem() {
 /* ───────────── HOW IT WORKS (Bento) ───────────── */
 function HowItWorks() {
   return (
-    <section id="how" className="ambient-bg relative py-24 sm:py-28">
-      <div className="mx-auto max-w-7xl px-5 sm:px-8">
+    <section id="how" className="ambient-bg relative py-20 sm:py-28">
+      <div className="mx-auto max-w-7xl px-4 sm:px-8">
         <div className="mx-auto max-w-3xl text-center">
           <span className="inline-flex items-center gap-2 rounded-full border border-[rgba(0,163,255,0.25)] bg-[rgba(0,163,255,0.06)] px-3.5 py-1.5 text-[11px] font-semibold uppercase tracking-wider text-[var(--cyan-brand)]">
             How It Works
           </span>
-          <h2 className="mt-5 font-display text-3xl font-extrabold tracking-tight text-[var(--navy)] sm:text-[2.6rem]">
+          <h2 className="mt-5 font-display text-[1.75rem] font-extrabold leading-tight tracking-tight text-[var(--navy)] sm:text-[2.6rem]">
             Sistem dalam <span className="text-gradient-brand">Genggaman Anda</span>
           </h2>
-          <p className="mt-5 text-slate-600 sm:text-lg">
+          <p className="mt-4 text-[15px] text-slate-600 sm:mt-5 sm:text-lg">
             Sinergi tiga komponen utama — <span className="font-semibold text-[var(--navy)]">Latihan Setiap Hari</span>.{" "}
             <span className="font-semibold text-[var(--navy)]">Evaluasi Setiap Minggu</span>.{" "}
             <span className="font-semibold text-[var(--navy)]">Laporan Transformasi Setiap Bulan</span>.
@@ -417,19 +420,21 @@ function HowItWorks() {
         </div>
 
         {/* Bento grid */}
-        <div className="mt-14 grid gap-5 lg:grid-cols-3 lg:grid-rows-2">
+        <div className="mt-10 grid gap-4 sm:mt-14 sm:gap-5 lg:grid-cols-3 lg:grid-rows-2">
           {/* Daily Drill — wide */}
-          <article className="glass-card relative overflow-hidden rounded-[28px] p-7 lg:col-span-2 lg:row-span-1">
+          <article className="glass-card relative overflow-hidden rounded-[28px] p-6 sm:p-7 lg:col-span-2 lg:row-span-1">
+
             <BentoLabel num="01" label="Daily Speaking Drill" />
             <div className="mt-4 grid items-center gap-6 sm:grid-cols-[1fr_auto]">
               <div>
-                <h3 className="font-display text-2xl font-bold leading-tight text-[var(--navy)] sm:text-3xl">
+                <h3 className="font-display text-xl font-bold leading-tight text-[var(--navy)] sm:text-2xl lg:text-3xl">
                   Latihan harian yang mendikte{" "}
                   <span className="text-gradient-brand">kebutuhan personal</span> Anda.
                 </h3>
                 <p className="mt-3 text-sm text-slate-600 sm:text-base">
                   Artikulasi, kontrol filler words, atau intonasi — dikurasikan setiap hari, 10 menit cukup.
                 </p>
+
                 <div className="mt-5 flex flex-wrap gap-2">
                   {["Artikulasi", "Filler Words", "Intonasi", "Pacing"].map((t) => (
                     <span
@@ -483,9 +488,9 @@ function HowItWorks() {
           </article>
 
           {/* Audio submission */}
-          <article className="relative overflow-hidden rounded-[28px] bg-[var(--navy)] p-7 text-white">
+          <article className="relative overflow-hidden rounded-[28px] bg-[var(--navy)] p-6 text-white sm:p-7">
             <BentoLabel num="02" label="Weekly Audio Submission" dark />
-            <h3 className="mt-4 font-display text-2xl font-bold leading-tight">
+            <h3 className="mt-4 font-display text-xl font-bold leading-tight sm:text-2xl">
               1 rekaman seminggu.
               <br />
               <span className="text-gradient-brand">100% privat.</span>
@@ -493,6 +498,7 @@ function HowItWorks() {
             <p className="mt-3 text-sm text-white/70">
               Kirimkan rekaman suara latihan terbaik Anda. Data sepenuhnya aman & rahasia.
             </p>
+
 
             <div className="mt-6 rounded-2xl border border-white/10 bg-white/[0.04] p-4">
               <div className="flex items-center justify-between text-[10px] font-semibold uppercase tracking-wider text-white/60">
@@ -502,15 +508,15 @@ function HowItWorks() {
                 </span>
                 <span>05:00 MAX</span>
               </div>
-              <div className="mt-3 flex h-12 items-end gap-[3px]">
-                {Array.from({ length: 38 }).map((_, i) => {
+              <div className="mt-3 flex h-12 items-end gap-[2px] sm:gap-[3px]">
+                {Array.from({ length: 28 }).map((_, i) => {
                   const h = 20 + Math.abs(Math.sin(i * 0.6)) * 80;
-                  const active = i < 22;
+                  const active = i < 16;
                   return (
                     <span
                       key={i}
                       style={{ height: `${h}%` }}
-                      className={`w-[3px] rounded-full ${
+                      className={`w-[3px] flex-1 rounded-full ${
                         active
                           ? "bg-gradient-to-t from-[var(--cyan-brand)] to-[var(--aqua-glow)]"
                           : "bg-white/15"
@@ -519,6 +525,7 @@ function HowItWorks() {
                   );
                 })}
               </div>
+
               <div className="mt-3 flex items-center justify-between text-[11px] font-mono text-white/60">
                 <span>02:48</span>
                 <span className="flex items-center gap-1 text-[var(--aqua-glow)]">
@@ -530,11 +537,11 @@ function HowItWorks() {
           </article>
 
           {/* AI + Coach analytics — wide */}
-          <article className="glass-card relative overflow-hidden rounded-[28px] p-7 lg:col-span-3">
-            <div className="grid items-center gap-8 lg:grid-cols-[1.1fr_1.4fr]">
+          <article className="glass-card relative overflow-hidden rounded-[28px] p-6 sm:p-7 lg:col-span-3">
+            <div className="grid items-center gap-6 sm:gap-8 lg:grid-cols-[1.1fr_1.4fr]">
               <div>
                 <BentoLabel num="03" label="AI Mentor + Coach Analytics" />
-                <h3 className="mt-4 font-display text-2xl font-bold leading-tight text-[var(--navy)] sm:text-[1.8rem]">
+                <h3 className="mt-4 font-display text-xl font-bold leading-tight text-[var(--navy)] sm:text-2xl lg:text-[1.8rem]">
                   Evaluasi presisi dari kombinasi{" "}
                   <span className="text-gradient-brand">AI Mentor</span> &
                   sentuhan personal <span className="text-gradient-brand">Coach Faisal</span>.
@@ -542,7 +549,7 @@ function HowItWorks() {
                 <p className="mt-3 text-sm text-slate-600 sm:text-base">
                   Lacak perkembangan Anda secara terukur — bukan sekadar perasaan.
                 </p>
-                <div className="mt-5 grid grid-cols-3 gap-3">
+                <div className="mt-5 grid grid-cols-3 gap-2 sm:gap-3">
                   {[
                     { k: "Confidence", v: "+24%", icon: TrendingUp },
                     { k: "Clarity", v: "+18%", icon: Sparkles },
@@ -550,17 +557,18 @@ function HowItWorks() {
                   ].map(({ k, v, icon: Icon }) => (
                     <div
                       key={k}
-                      className="rounded-2xl border border-[rgba(0,163,255,0.15)] bg-white/80 p-3"
+                      className="rounded-2xl border border-[rgba(0,163,255,0.15)] bg-white/80 p-2.5 sm:p-3"
                     >
                       <Icon className="h-4 w-4 text-[var(--cyan-brand)]" />
-                      <div className="mt-2 text-[10px] font-semibold uppercase tracking-wider text-slate-500">
+                      <div className="mt-2 text-[9px] font-semibold uppercase tracking-wider text-slate-500 sm:text-[10px]">
                         {k}
                       </div>
-                      <div className="font-display text-lg font-bold text-[var(--navy)]">{v}</div>
+                      <div className="font-display text-base font-bold text-[var(--navy)] sm:text-lg">{v}</div>
                     </div>
                   ))}
                 </div>
               </div>
+
 
               {/* Chart */}
               <div className="rounded-2xl border border-[rgba(0,163,255,0.15)] bg-white p-5">
@@ -663,32 +671,33 @@ function Audience() {
   ];
 
   return (
-    <section id="audience" className="relative py-24 sm:py-28">
-      <div className="mx-auto max-w-6xl px-5 sm:px-8">
+    <section id="audience" className="relative py-20 sm:py-28">
+      <div className="mx-auto max-w-6xl px-4 sm:px-8">
         <div className="mx-auto max-w-3xl text-center">
           <span className="inline-flex items-center gap-2 rounded-full border border-[rgba(0,163,255,0.25)] bg-[rgba(0,163,255,0.06)] px-3.5 py-1.5 text-[11px] font-semibold uppercase tracking-wider text-[var(--cyan-brand)]">
             For You
           </span>
-          <h2 className="mt-5 font-display text-3xl font-extrabold tracking-tight text-[var(--navy)] sm:text-[2.6rem]">
+          <h2 className="mt-5 font-display text-[1.75rem] font-extrabold leading-tight tracking-tight text-[var(--navy)] sm:text-[2.6rem]">
             Dirancang Khusus untuk Mereka yang
             <br className="hidden sm:block" />{" "}
             <span className="text-gradient-brand">Dituntut Tampil Meyakinkan</span>
           </h2>
         </div>
 
-        <div className="mt-12 flex flex-wrap items-center justify-center gap-3">
+        <div className="mt-8 flex flex-wrap items-center justify-center gap-2 sm:mt-12 sm:gap-3">
           {segments.map(({ label, icon: Icon }) => (
             <div
               key={label}
-              className="group inline-flex items-center gap-2.5 rounded-full border border-[rgba(0,163,255,0.18)] bg-white px-5 py-3 text-sm font-semibold text-[var(--navy)] shadow-[0_8px_24px_-18px_rgba(0,163,255,0.5)] transition hover:-translate-y-0.5 hover:border-[var(--cyan-brand)] hover:shadow-[0_14px_30px_-18px_rgba(0,163,255,0.7)]"
+              className="group inline-flex items-center gap-2 rounded-full border border-[rgba(0,163,255,0.18)] bg-white px-3.5 py-2.5 text-xs font-semibold text-[var(--navy)] shadow-[0_8px_24px_-18px_rgba(0,163,255,0.5)] transition hover:-translate-y-0.5 hover:border-[var(--cyan-brand)] hover:shadow-[0_14px_30px_-18px_rgba(0,163,255,0.7)] sm:gap-2.5 sm:px-5 sm:py-3 sm:text-sm"
             >
-              <span className="grid h-7 w-7 place-items-center rounded-full bg-gradient-to-br from-[var(--cyan-brand)] to-[var(--aqua-glow)] text-white">
-                <Icon className="h-3.5 w-3.5" />
+              <span className="grid h-6 w-6 place-items-center rounded-full bg-gradient-to-br from-[var(--cyan-brand)] to-[var(--aqua-glow)] text-white sm:h-7 sm:w-7">
+                <Icon className="h-3 w-3 sm:h-3.5 sm:w-3.5" />
               </span>
               {label}
             </div>
           ))}
         </div>
+
 
         {/* Authority block — clean, professional card frame */}
         <AuthorityBlock />
@@ -699,12 +708,12 @@ function Audience() {
 
 function AuthorityBlock() {
   return (
-    <div className="relative mt-20">
-      <div className="grid items-center gap-10 lg:grid-cols-2">
+    <div className="relative mt-14 sm:mt-20">
+      <div className="grid items-center gap-8 sm:gap-10 lg:grid-cols-2">
         {/* Professional framed image */}
         <div className="relative order-2 lg:order-1">
-          <div className="relative rounded-[28px] border border-slate-200/80 bg-white p-3 shadow-[0_24px_60px_-24px_rgba(13,33,71,0.18)]">
-            <div className="relative overflow-hidden rounded-[20px] bg-slate-100 aspect-[16/9]">
+          <div className="relative rounded-[24px] border border-slate-200/80 bg-white p-2.5 shadow-[0_24px_60px_-24px_rgba(13,33,71,0.18)] sm:rounded-[28px] sm:p-3">
+            <div className="relative overflow-hidden rounded-[18px] bg-slate-100 aspect-[16/9] sm:rounded-[20px]">
               <img
                 src={forYouAsset.url}
                 alt="Coach Faisal Maulana berinteraksi dengan peserta Speaking PRO"
@@ -713,7 +722,7 @@ function AuthorityBlock() {
               />
             </div>
             {/* precision corner accent */}
-            <div className="pointer-events-none absolute -bottom-px -right-px h-16 w-16 rounded-tl-[28px] rounded-br-[28px] border-l border-t border-white/40 bg-gradient-to-br from-[var(--cyan-brand)] to-[var(--aqua-glow)]" />
+            <div className="pointer-events-none absolute -bottom-px -right-px h-12 w-12 rounded-tl-[24px] rounded-br-[24px] border-l border-t border-white/40 bg-gradient-to-br from-[var(--cyan-brand)] to-[var(--aqua-glow)] sm:h-16 sm:w-16 sm:rounded-tl-[28px] sm:rounded-br-[28px]" />
           </div>
         </div>
 
@@ -723,16 +732,17 @@ function AuthorityBlock() {
             <ShieldCheck className="h-3 w-3" />
             Benchmark Framework
           </span>
-          <h3 className="mt-4 font-display text-2xl font-extrabold leading-tight text-[var(--navy)] sm:text-3xl">
+          <h3 className="mt-4 font-display text-xl font-extrabold leading-tight text-[var(--navy)] sm:text-3xl">
             Framework <span className="text-gradient-brand">SPEAKING PRO</span> berstandar Internasional
           </h3>
-          <p className="mt-3 text-slate-600">
+          <p className="mt-3 text-sm text-slate-600 sm:text-base">
             Dibangun dari pengalaman <span className="font-semibold text-[var(--navy)]">COACH FAISAL MAULANA</span> selama{" "}
             <span className="font-semibold text-[var(--navy)]">18+ tahun</span> sebagai praktisi public speaking
             yang telah menangani <span className="font-semibold text-[var(--navy)]">200+ Perusahaan Nasional,
             Multi-Nasional & Kementerian Republik Indonesia</span> serta secara total telah berbicara di depan{" "}
             <span className="font-semibold text-[var(--navy)]">100.000+ Peserta</span> secara offline.
           </p>
+
 
           <div className="mt-6 text-[11px] font-semibold uppercase tracking-wider text-[var(--cyan-brand)]">
             Dilengkapi oleh AI MENTOR yang menerapkan:
@@ -800,32 +810,33 @@ const TEAM = [
 
 function Team() {
   return (
-    <section id="team" className="relative py-24 sm:py-28">
+    <section id="team" className="relative py-20 sm:py-28">
       <div className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-[rgba(0,163,255,0.05)] to-transparent" />
-      <div className="relative mx-auto max-w-7xl px-5 sm:px-8">
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-8">
         <div className="mx-auto max-w-3xl text-center">
           <span className="inline-flex items-center gap-2 rounded-full border border-[rgba(0,163,255,0.25)] bg-[rgba(0,163,255,0.06)] px-3.5 py-1.5 text-[11px] font-semibold uppercase tracking-wider text-[var(--cyan-brand)]">
             <Users className="h-3.5 w-3.5" />
             Meet The Team
           </span>
-          <h2 className="mt-5 font-display text-3xl font-extrabold tracking-tight text-[var(--navy)] sm:text-[2.6rem]">
+          <h2 className="mt-5 font-display text-[1.75rem] font-extrabold leading-tight tracking-tight text-[var(--navy)] sm:text-[2.6rem]">
             Tim di Balik <span className="text-gradient-brand">SPEAKING PRO™</span>
           </h2>
-          <p className="mt-5 text-slate-600 sm:text-lg">
+          <p className="mt-4 text-[15px] text-slate-600 sm:mt-5 sm:text-lg">
             Praktisi berpengalaman yang membangun standar baru pelatihan public speaking di Indonesia —
             perpaduan keahlian coaching, teknologi AI, edukasi, dan pengembangan bisnis.
           </p>
         </div>
 
         {/* Featured founder */}
-        <div className="mt-14 grid gap-6 lg:grid-cols-[1.05fr_1fr] lg:items-stretch">
+        <div className="mt-10 grid gap-4 sm:mt-14 sm:gap-6 lg:grid-cols-[1.05fr_1fr] lg:items-stretch">
           <TeamFeaturedCard member={TEAM[0]} />
-          <div className="grid gap-4 sm:grid-cols-2">
+          <div className="grid gap-4 grid-cols-2">
             {TEAM.slice(1, 5).map((m) => (
               <TeamCard key={m.name} member={m} />
             ))}
           </div>
         </div>
+
       </div>
     </section>
   );
@@ -844,16 +855,17 @@ function TeamFeaturedCard({ member }: { member: Member }) {
           loading="lazy"
         />
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#0D2147]/85 via-[#0D2147]/25 to-transparent" />
-        <div className="absolute inset-x-0 bottom-0 p-6 sm:p-8 text-white">
-          <span className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-[var(--aqua-glow)] backdrop-blur">
+        <div className="absolute inset-x-0 bottom-0 p-5 sm:p-8 text-white">
+          <span className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[var(--aqua-glow)] backdrop-blur">
             <Sparkles className="h-3 w-3" />
             {member.role}
           </span>
-          <h3 className="mt-3 font-display text-2xl font-extrabold leading-tight sm:text-3xl">
+          <h3 className="mt-2.5 font-display text-xl font-extrabold leading-tight sm:mt-3 sm:text-3xl">
             {member.name}
           </h3>
-          <p className="mt-2 text-sm text-white/80 sm:text-base">{member.exp}</p>
+          <p className="mt-1.5 text-xs text-white/80 sm:mt-2 sm:text-base">{member.exp}</p>
         </div>
+
       </div>
     </article>
   );
@@ -870,15 +882,16 @@ function TeamCard({ member }: { member: Member }) {
           loading="lazy"
         />
       </div>
-      <div className="flex flex-1 flex-col p-5">
+      <div className="flex flex-1 flex-col p-4 sm:p-5">
         <span className="text-[10px] font-semibold uppercase tracking-wider text-[var(--cyan-brand)]">
           {member.role}
         </span>
-        <h3 className="mt-1.5 font-display text-base font-bold leading-snug text-[var(--navy)]">
+        <h3 className="mt-1.5 font-display text-sm font-bold leading-snug text-[var(--navy)] sm:text-base">
           {member.name}
         </h3>
-        <p className="mt-1.5 text-xs text-slate-500">{member.exp}</p>
+        <p className="mt-1.5 text-[11px] text-slate-500 sm:text-xs">{member.exp}</p>
       </div>
+
     </article>
   );
 }
@@ -901,7 +914,7 @@ function Pricing() {
   return (
     <section
       id="pricing"
-      className="relative overflow-hidden py-24 sm:py-28"
+      className="relative overflow-hidden py-20 sm:py-28"
       style={{ background: "#0D2147" }}
     >
       {/* glow background */}
@@ -910,26 +923,27 @@ function Pricing() {
         <div className="absolute -bottom-40 right-[-10%] h-[420px] w-[420px] rounded-full bg-[radial-gradient(closest-side,rgba(0,163,255,0.18),transparent_70%)]" />
       </div>
 
-      <div className="relative mx-auto max-w-5xl px-5 sm:px-8">
+      <div className="relative mx-auto max-w-5xl px-4 sm:px-8">
         <div className="mx-auto max-w-3xl text-center">
           <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3.5 py-1.5 text-[11px] font-semibold uppercase tracking-wider text-[var(--aqua-glow)] backdrop-blur">
             <Sparkles className="h-3.5 w-3.5" />
             Beta Program Launch Price
           </span>
-          <h2 className="mt-5 font-display text-3xl font-extrabold tracking-tight text-white sm:text-[2.6rem]">
+          <h2 className="mt-5 font-display text-[1.75rem] font-extrabold leading-tight tracking-tight text-white sm:text-[2.6rem]">
             Investasi Terbaik untuk
             <br className="hidden sm:block" />{" "}
             <span className="text-gradient-brand">Keterampilan Seumur Hidup.</span>
           </h2>
-          <p className="mt-5 text-white/70 sm:text-lg">
+          <p className="mt-4 text-[15px] text-white/70 sm:mt-5 sm:text-lg">
             Slot beta terbatas. Prioritas berdasarkan urutan pendaftaran.
           </p>
         </div>
 
         {/* Card */}
-        <div className="relative mx-auto mt-12 max-w-3xl">
-          <div className="absolute -inset-px rounded-[32px] bg-gradient-to-br from-[var(--cyan-brand)] via-[var(--aqua-glow)] to-[var(--cyan-brand)] opacity-70 blur-md" />
-          <div className="relative rounded-[32px] border border-white/10 bg-[#0A192F]/95 p-5 sm:p-10 backdrop-blur-xl">
+        <div className="relative mx-auto mt-10 max-w-3xl sm:mt-12">
+          <div className="absolute -inset-px rounded-[28px] bg-gradient-to-br from-[var(--cyan-brand)] via-[var(--aqua-glow)] to-[var(--cyan-brand)] opacity-70 blur-md sm:rounded-[32px]" />
+          <div className="relative rounded-[24px] border border-white/10 bg-[#0A192F]/95 p-5 backdrop-blur-xl sm:rounded-[32px] sm:p-10">
+
             <div className="flex flex-wrap items-start justify-between gap-3">
               <div className="min-w-0">
                 <div className="text-[11px] font-semibold uppercase tracking-wider text-[var(--aqua-glow)]">
@@ -944,16 +958,17 @@ function Pricing() {
               </span>
             </div>
 
-            <div className="mt-7 flex flex-wrap items-end gap-4">
+            <div className="mt-6 flex flex-col gap-4 sm:mt-7 sm:flex-row sm:flex-wrap sm:items-end">
               <div className="min-w-0">
-                <div className="text-sm text-white/50 line-through">Rp 150.000</div>
+                <div className="text-xs text-white/50 line-through sm:text-sm">Rp 150.000</div>
                 <div className="mt-1 flex flex-wrap items-baseline gap-x-2 gap-y-1">
-                  <span className="font-display text-4xl sm:text-6xl font-extrabold leading-none whitespace-nowrap">
+                  <span className="font-display text-[2.5rem] font-extrabold leading-none whitespace-nowrap sm:text-6xl">
                     <span className="text-gradient-brand">Rp 75.000</span>
                   </span>
-                  <span className="text-sm sm:text-base text-white/60">/ orang</span>
+                  <span className="text-sm text-white/60 sm:text-base">/ orang</span>
                 </div>
               </div>
+
               <div className="flex flex-col gap-2">
                 <span className="inline-flex items-center gap-2 rounded-full border border-[var(--aqua-glow)]/40 bg-[var(--aqua-glow)]/10 px-3 py-2 text-[11px] font-bold uppercase tracking-wider text-[var(--aqua-glow)]">
                   <Calendar className="h-3.5 w-3.5 shrink-0" />
@@ -1003,12 +1018,13 @@ function Pricing() {
             </ul>
 
             {/* Form */}
-            <div className="mt-8 rounded-2xl border border-white/10 bg-white/[0.04] p-5 sm:p-6">
-              <div className="mb-4 text-xs font-semibold uppercase tracking-wider text-[var(--aqua-glow)]">
+            <div className="mt-7 rounded-2xl border border-white/10 bg-white/[0.04] p-4 sm:mt-8 sm:p-6">
+              <div className="mb-3 text-[11px] font-semibold uppercase tracking-wider text-[var(--aqua-glow)] sm:mb-4 sm:text-xs">
                 Kunci Slot Anda Sekarang
               </div>
               <RegistrationForm variant="dark" />
             </div>
+
           </div>
         </div>
       </div>
