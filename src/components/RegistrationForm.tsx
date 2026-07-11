@@ -63,17 +63,18 @@ export function RegistrationForm({ variant = "light", compact = false }: Props) 
       <button
         type="submit"
         disabled={submitting}
-        className="btn-gradient group inline-flex w-full items-center justify-center gap-2 rounded-2xl px-6 py-4 text-sm font-semibold tracking-wide disabled:opacity-70"
+        className="btn-gradient group inline-flex w-full items-center justify-center gap-2 rounded-2xl px-4 py-3.5 text-[13px] font-semibold tracking-wide disabled:opacity-70 sm:px-6 sm:py-4 sm:text-sm"
       >
         {submitting ? (
           <Loader2 className="h-4 w-4 animate-spin" />
         ) : (
           <>
-            Daftar Pre-Order & Hubungi Admin
-            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+            <span>Daftar Pre-Order & Hubungi Admin</span>
+            <ArrowRight className="h-4 w-4 shrink-0 transition-transform group-hover:translate-x-0.5" />
           </>
         )}
       </button>
+
       <p className={`text-[11px] ${isDark ? "text-white/55" : "text-slate-500"}`}>
         Data Anda aman. Anda akan diarahkan ke WhatsApp Admin untuk konfirmasi slot.
       </p>
