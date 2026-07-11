@@ -671,32 +671,33 @@ function Audience() {
   ];
 
   return (
-    <section id="audience" className="relative py-24 sm:py-28">
-      <div className="mx-auto max-w-6xl px-5 sm:px-8">
+    <section id="audience" className="relative py-20 sm:py-28">
+      <div className="mx-auto max-w-6xl px-4 sm:px-8">
         <div className="mx-auto max-w-3xl text-center">
           <span className="inline-flex items-center gap-2 rounded-full border border-[rgba(0,163,255,0.25)] bg-[rgba(0,163,255,0.06)] px-3.5 py-1.5 text-[11px] font-semibold uppercase tracking-wider text-[var(--cyan-brand)]">
             For You
           </span>
-          <h2 className="mt-5 font-display text-3xl font-extrabold tracking-tight text-[var(--navy)] sm:text-[2.6rem]">
+          <h2 className="mt-5 font-display text-[1.75rem] font-extrabold leading-tight tracking-tight text-[var(--navy)] sm:text-[2.6rem]">
             Dirancang Khusus untuk Mereka yang
             <br className="hidden sm:block" />{" "}
             <span className="text-gradient-brand">Dituntut Tampil Meyakinkan</span>
           </h2>
         </div>
 
-        <div className="mt-12 flex flex-wrap items-center justify-center gap-3">
+        <div className="mt-8 flex flex-wrap items-center justify-center gap-2 sm:mt-12 sm:gap-3">
           {segments.map(({ label, icon: Icon }) => (
             <div
               key={label}
-              className="group inline-flex items-center gap-2.5 rounded-full border border-[rgba(0,163,255,0.18)] bg-white px-5 py-3 text-sm font-semibold text-[var(--navy)] shadow-[0_8px_24px_-18px_rgba(0,163,255,0.5)] transition hover:-translate-y-0.5 hover:border-[var(--cyan-brand)] hover:shadow-[0_14px_30px_-18px_rgba(0,163,255,0.7)]"
+              className="group inline-flex items-center gap-2 rounded-full border border-[rgba(0,163,255,0.18)] bg-white px-3.5 py-2.5 text-xs font-semibold text-[var(--navy)] shadow-[0_8px_24px_-18px_rgba(0,163,255,0.5)] transition hover:-translate-y-0.5 hover:border-[var(--cyan-brand)] hover:shadow-[0_14px_30px_-18px_rgba(0,163,255,0.7)] sm:gap-2.5 sm:px-5 sm:py-3 sm:text-sm"
             >
-              <span className="grid h-7 w-7 place-items-center rounded-full bg-gradient-to-br from-[var(--cyan-brand)] to-[var(--aqua-glow)] text-white">
-                <Icon className="h-3.5 w-3.5" />
+              <span className="grid h-6 w-6 place-items-center rounded-full bg-gradient-to-br from-[var(--cyan-brand)] to-[var(--aqua-glow)] text-white sm:h-7 sm:w-7">
+                <Icon className="h-3 w-3 sm:h-3.5 sm:w-3.5" />
               </span>
               {label}
             </div>
           ))}
         </div>
+
 
         {/* Authority block — clean, professional card frame */}
         <AuthorityBlock />
