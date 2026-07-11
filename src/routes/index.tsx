@@ -537,11 +537,11 @@ function HowItWorks() {
           </article>
 
           {/* AI + Coach analytics — wide */}
-          <article className="glass-card relative overflow-hidden rounded-[28px] p-7 lg:col-span-3">
-            <div className="grid items-center gap-8 lg:grid-cols-[1.1fr_1.4fr]">
+          <article className="glass-card relative overflow-hidden rounded-[28px] p-6 sm:p-7 lg:col-span-3">
+            <div className="grid items-center gap-6 sm:gap-8 lg:grid-cols-[1.1fr_1.4fr]">
               <div>
                 <BentoLabel num="03" label="AI Mentor + Coach Analytics" />
-                <h3 className="mt-4 font-display text-2xl font-bold leading-tight text-[var(--navy)] sm:text-[1.8rem]">
+                <h3 className="mt-4 font-display text-xl font-bold leading-tight text-[var(--navy)] sm:text-2xl lg:text-[1.8rem]">
                   Evaluasi presisi dari kombinasi{" "}
                   <span className="text-gradient-brand">AI Mentor</span> &
                   sentuhan personal <span className="text-gradient-brand">Coach Faisal</span>.
@@ -549,7 +549,7 @@ function HowItWorks() {
                 <p className="mt-3 text-sm text-slate-600 sm:text-base">
                   Lacak perkembangan Anda secara terukur — bukan sekadar perasaan.
                 </p>
-                <div className="mt-5 grid grid-cols-3 gap-3">
+                <div className="mt-5 grid grid-cols-3 gap-2 sm:gap-3">
                   {[
                     { k: "Confidence", v: "+24%", icon: TrendingUp },
                     { k: "Clarity", v: "+18%", icon: Sparkles },
@@ -557,17 +557,18 @@ function HowItWorks() {
                   ].map(({ k, v, icon: Icon }) => (
                     <div
                       key={k}
-                      className="rounded-2xl border border-[rgba(0,163,255,0.15)] bg-white/80 p-3"
+                      className="rounded-2xl border border-[rgba(0,163,255,0.15)] bg-white/80 p-2.5 sm:p-3"
                     >
                       <Icon className="h-4 w-4 text-[var(--cyan-brand)]" />
-                      <div className="mt-2 text-[10px] font-semibold uppercase tracking-wider text-slate-500">
+                      <div className="mt-2 text-[9px] font-semibold uppercase tracking-wider text-slate-500 sm:text-[10px]">
                         {k}
                       </div>
-                      <div className="font-display text-lg font-bold text-[var(--navy)]">{v}</div>
+                      <div className="font-display text-base font-bold text-[var(--navy)] sm:text-lg">{v}</div>
                     </div>
                   ))}
                 </div>
               </div>
+
 
               {/* Chart */}
               <div className="rounded-2xl border border-[rgba(0,163,255,0.15)] bg-white p-5">
