@@ -810,32 +810,33 @@ const TEAM = [
 
 function Team() {
   return (
-    <section id="team" className="relative py-24 sm:py-28">
+    <section id="team" className="relative py-20 sm:py-28">
       <div className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-[rgba(0,163,255,0.05)] to-transparent" />
-      <div className="relative mx-auto max-w-7xl px-5 sm:px-8">
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-8">
         <div className="mx-auto max-w-3xl text-center">
           <span className="inline-flex items-center gap-2 rounded-full border border-[rgba(0,163,255,0.25)] bg-[rgba(0,163,255,0.06)] px-3.5 py-1.5 text-[11px] font-semibold uppercase tracking-wider text-[var(--cyan-brand)]">
             <Users className="h-3.5 w-3.5" />
             Meet The Team
           </span>
-          <h2 className="mt-5 font-display text-3xl font-extrabold tracking-tight text-[var(--navy)] sm:text-[2.6rem]">
+          <h2 className="mt-5 font-display text-[1.75rem] font-extrabold leading-tight tracking-tight text-[var(--navy)] sm:text-[2.6rem]">
             Tim di Balik <span className="text-gradient-brand">SPEAKING PRO™</span>
           </h2>
-          <p className="mt-5 text-slate-600 sm:text-lg">
+          <p className="mt-4 text-[15px] text-slate-600 sm:mt-5 sm:text-lg">
             Praktisi berpengalaman yang membangun standar baru pelatihan public speaking di Indonesia —
             perpaduan keahlian coaching, teknologi AI, edukasi, dan pengembangan bisnis.
           </p>
         </div>
 
         {/* Featured founder */}
-        <div className="mt-14 grid gap-6 lg:grid-cols-[1.05fr_1fr] lg:items-stretch">
+        <div className="mt-10 grid gap-4 sm:mt-14 sm:gap-6 lg:grid-cols-[1.05fr_1fr] lg:items-stretch">
           <TeamFeaturedCard member={TEAM[0]} />
-          <div className="grid gap-4 sm:grid-cols-2">
+          <div className="grid gap-4 grid-cols-2">
             {TEAM.slice(1, 5).map((m) => (
               <TeamCard key={m.name} member={m} />
             ))}
           </div>
         </div>
+
       </div>
     </section>
   );
