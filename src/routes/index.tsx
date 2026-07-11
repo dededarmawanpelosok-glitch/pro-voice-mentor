@@ -403,16 +403,16 @@ function Problem() {
 /* ───────────── HOW IT WORKS (Bento) ───────────── */
 function HowItWorks() {
   return (
-    <section id="how" className="ambient-bg relative py-24 sm:py-28">
-      <div className="mx-auto max-w-7xl px-5 sm:px-8">
+    <section id="how" className="ambient-bg relative py-20 sm:py-28">
+      <div className="mx-auto max-w-7xl px-4 sm:px-8">
         <div className="mx-auto max-w-3xl text-center">
           <span className="inline-flex items-center gap-2 rounded-full border border-[rgba(0,163,255,0.25)] bg-[rgba(0,163,255,0.06)] px-3.5 py-1.5 text-[11px] font-semibold uppercase tracking-wider text-[var(--cyan-brand)]">
             How It Works
           </span>
-          <h2 className="mt-5 font-display text-3xl font-extrabold tracking-tight text-[var(--navy)] sm:text-[2.6rem]">
+          <h2 className="mt-5 font-display text-[1.75rem] font-extrabold leading-tight tracking-tight text-[var(--navy)] sm:text-[2.6rem]">
             Sistem dalam <span className="text-gradient-brand">Genggaman Anda</span>
           </h2>
-          <p className="mt-5 text-slate-600 sm:text-lg">
+          <p className="mt-4 text-[15px] text-slate-600 sm:mt-5 sm:text-lg">
             Sinergi tiga komponen utama — <span className="font-semibold text-[var(--navy)]">Latihan Setiap Hari</span>.{" "}
             <span className="font-semibold text-[var(--navy)]">Evaluasi Setiap Minggu</span>.{" "}
             <span className="font-semibold text-[var(--navy)]">Laporan Transformasi Setiap Bulan</span>.
@@ -420,9 +420,10 @@ function HowItWorks() {
         </div>
 
         {/* Bento grid */}
-        <div className="mt-14 grid gap-5 lg:grid-cols-3 lg:grid-rows-2">
+        <div className="mt-10 grid gap-4 sm:mt-14 sm:gap-5 lg:grid-cols-3 lg:grid-rows-2">
           {/* Daily Drill — wide */}
-          <article className="glass-card relative overflow-hidden rounded-[28px] p-7 lg:col-span-2 lg:row-span-1">
+          <article className="glass-card relative overflow-hidden rounded-[28px] p-6 sm:p-7 lg:col-span-2 lg:row-span-1">
+
             <BentoLabel num="01" label="Daily Speaking Drill" />
             <div className="mt-4 grid items-center gap-6 sm:grid-cols-[1fr_auto]">
               <div>
