@@ -25,8 +25,9 @@ export function RegistrationForm({ variant = "light", compact = false }: Props) 
   }
 
   const inputCls = isDark
-    ? "w-full rounded-2xl border border-white/15 bg-white/5 px-4 py-3.5 text-sm text-white placeholder:text-white/50 outline-none transition focus:border-[var(--aqua-glow)] focus:bg-white/10"
-    : "w-full rounded-2xl border border-[rgba(0,163,255,0.18)] bg-white px-4 py-3.5 text-sm text-[var(--navy)] placeholder:text-slate-400 outline-none transition focus:border-[var(--cyan-brand)] focus:shadow-[0_0_0_4px_rgba(0,163,255,0.12)]";
+    ? "w-full rounded-2xl border border-white/15 bg-white/5 px-4 py-3 sm:py-3.5 text-sm text-white placeholder:text-white/50 outline-none transition focus:border-[var(--aqua-glow)] focus:bg-white/10"
+    : "w-full rounded-2xl border border-[rgba(0,163,255,0.18)] bg-white px-4 py-3 sm:py-3.5 text-sm text-[var(--navy)] placeholder:text-slate-400 outline-none transition focus:border-[var(--cyan-brand)] focus:shadow-[0_0_0_4px_rgba(0,163,255,0.12)]";
+
 
   return (
     <form onSubmit={handleSubmit} className={compact ? "space-y-3" : "space-y-3.5"}>
