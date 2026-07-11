@@ -427,13 +427,14 @@ function HowItWorks() {
             <BentoLabel num="01" label="Daily Speaking Drill" />
             <div className="mt-4 grid items-center gap-6 sm:grid-cols-[1fr_auto]">
               <div>
-                <h3 className="font-display text-2xl font-bold leading-tight text-[var(--navy)] sm:text-3xl">
+                <h3 className="font-display text-xl font-bold leading-tight text-[var(--navy)] sm:text-2xl lg:text-3xl">
                   Latihan harian yang mendikte{" "}
                   <span className="text-gradient-brand">kebutuhan personal</span> Anda.
                 </h3>
                 <p className="mt-3 text-sm text-slate-600 sm:text-base">
                   Artikulasi, kontrol filler words, atau intonasi — dikurasikan setiap hari, 10 menit cukup.
                 </p>
+
                 <div className="mt-5 flex flex-wrap gap-2">
                   {["Artikulasi", "Filler Words", "Intonasi", "Pacing"].map((t) => (
                     <span
