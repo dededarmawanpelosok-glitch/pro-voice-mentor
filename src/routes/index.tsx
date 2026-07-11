@@ -155,11 +155,11 @@ function Hero() {
       />
 
 
-      <div className="relative mx-auto grid max-w-7xl gap-14 px-5 pt-16 pb-20 sm:px-8 lg:grid-cols-[1.05fr_1fr] lg:gap-10 lg:pt-24 lg:pb-28">
+      <div className="relative mx-auto grid max-w-7xl gap-10 px-4 pt-10 pb-16 sm:gap-14 sm:px-8 sm:pt-16 sm:pb-20 lg:grid-cols-[1.05fr_1fr] lg:gap-10 lg:pt-24 lg:pb-28">
         {/* LEFT */}
-        <div className="flex flex-col">
-          <span className="inline-flex w-fit flex-wrap items-center gap-x-2 gap-y-1 rounded-full border border-[rgba(0,163,255,0.25)] bg-white/80 px-4 py-2 text-[11px] font-semibold tracking-wide text-[var(--navy)] backdrop-blur">
-            <Sparkles className="h-3.5 w-3.5 text-[var(--cyan-brand)]" />
+        <div className="flex min-w-0 flex-col">
+          <span className="inline-flex w-fit max-w-full flex-wrap items-center gap-x-2 gap-y-1 rounded-full border border-[rgba(0,163,255,0.25)] bg-white/80 px-3 py-1.5 text-[10px] font-semibold tracking-wide text-[var(--navy)] backdrop-blur sm:px-4 sm:py-2 sm:text-[11px]">
+            <Sparkles className="h-3.5 w-3.5 shrink-0 text-[var(--cyan-brand)]" />
             <span className="text-[var(--navy)]">
               The First AI-Powered Public Speaking Platform in Indonesia
             </span>
@@ -169,7 +169,7 @@ function Hero() {
             </span>
           </span>
 
-          <h1 className="mt-6 font-display text-[2.4rem] font-extrabold leading-[1.05] tracking-tight text-[var(--navy)] sm:text-5xl lg:text-[3.4rem]">
+          <h1 className="mt-5 font-display text-[1.85rem] font-extrabold leading-[1.1] tracking-tight text-[var(--navy)] xs:text-[2.1rem] sm:mt-6 sm:text-5xl sm:leading-[1.05] lg:text-[3.4rem]">
             Public Speaking
             <br />
             Tidak Hanya Dipelajari
@@ -177,19 +177,20 @@ function Hero() {
             Tetapi <span className="text-gradient-brand">Harus Dilatih</span>
           </h1>
 
-          <p className="mt-5 max-w-xl text-base text-slate-600 sm:text-lg">
+          <p className="mt-4 max-w-xl text-[15px] text-slate-600 sm:mt-5 sm:text-lg">
             <span className="font-semibold text-[var(--navy)]">Latihan Setiap Hari.</span>{" "}
             <span className="font-semibold text-[var(--navy)]">Evaluasi Setiap Minggu.</span>{" "}
             <span className="font-semibold text-[var(--navy)]">Laporan Transformasi Setiap Bulan.</span>
           </p>
 
-          <div className="glass-card mt-8 rounded-3xl p-5 sm:p-6">
-            <div className="mb-4 flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-[var(--navy)]">
-              <Lock className="h-3.5 w-3.5 text-[var(--cyan-brand)]" />
-              Quick Registration — Kunci Slot Beta Anda
+          <div className="glass-card mt-7 rounded-3xl p-4 sm:mt-8 sm:p-6">
+            <div className="mb-3 flex items-center gap-2 text-[11px] font-semibold uppercase tracking-wider text-[var(--navy)] sm:mb-4 sm:text-xs">
+              <Lock className="h-3.5 w-3.5 shrink-0 text-[var(--cyan-brand)]" />
+              <span className="min-w-0">Quick Registration — Kunci Slot Beta Anda</span>
             </div>
             <RegistrationForm />
           </div>
+
 
           <div className="mt-7 flex flex-wrap items-center gap-x-6 gap-y-3 text-xs text-slate-500">
             <div className="flex items-center gap-2">
