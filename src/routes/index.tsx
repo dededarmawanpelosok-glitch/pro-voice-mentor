@@ -111,10 +111,11 @@ function Navbar() {
           </span>
         </a>
         <a
-          href="#pricing"
-          className="btn-gradient shrink-0 rounded-full px-4 py-2 text-[11px] font-semibold tracking-wide sm:px-5 sm:py-2.5 sm:text-xs"
+          href="#download"
+          className="btn-gradient shrink-0 inline-flex items-center gap-1.5 rounded-full px-4 py-2 text-[11px] font-semibold tracking-wide sm:px-5 sm:py-2.5 sm:text-xs"
         >
-          Daftar Beta
+          <Download className="h-3.5 w-3.5" />
+          Download App
         </a>
       </div>
 
