@@ -103,7 +103,7 @@ function DetailPage() {
               </p>
               {s.bullets && (
                 <ul className="mt-4 space-y-2">
-                  {s.bullets.map((b) => (
+                  {s.bullets.map((b: string) => (
                     <li key={b} className="flex items-start gap-2.5 text-[14px] text-slate-700">
                       <span className="mt-0.5 inline-flex h-5 w-5 flex-none items-center justify-center rounded-full bg-[var(--cyan-brand)]/10 text-[var(--cyan-brand)]">
                         <Check className="h-3 w-3" />
