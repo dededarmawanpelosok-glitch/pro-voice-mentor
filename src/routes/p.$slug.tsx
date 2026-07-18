@@ -1,6 +1,6 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { ArrowLeft, ArrowRight, Check } from "lucide-react";
-import { PAGES } from "@/lib/site-content";
+import { PAGES, type PageContent, type PageSection } from "@/lib/site-content";
 import { SiteFooter } from "@/components/SiteFooter";
 import logoAsset from "@/assets/speaking-pro-logo.png.asset.json";
 
