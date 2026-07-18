@@ -189,13 +189,26 @@ function Hero() {
             <span className="font-semibold text-[var(--navy)]">Laporan Transformasi Setiap Bulan.</span>
           </p>
 
-          <div className="glass-card mt-7 rounded-3xl p-4 sm:mt-8 sm:p-6">
+          <div className="glass-card mt-7 rounded-3xl p-5 sm:mt-8 sm:p-6">
             <div className="mb-3 flex items-center gap-2 text-[11px] font-semibold uppercase tracking-wider text-[var(--navy)] sm:mb-4 sm:text-xs">
-              <Lock className="h-3.5 w-3.5 shrink-0 text-[var(--cyan-brand)]" />
-              <span className="min-w-0">Quick Registration — Kunci Slot Beta Anda</span>
+              <Zap className="h-3.5 w-3.5 shrink-0 text-[var(--cyan-brand)]" />
+              <span className="min-w-0">Full Version Tersedia — Install di Ponsel Anda</span>
             </div>
-            <RegistrationForm />
+            <p className="text-sm text-slate-600">
+              Buka aplikasi web Speaking Pro™ dan install ke home screen — tanpa Play Store / App Store.
+            </p>
+            <div className="mt-4 flex flex-col gap-2.5 sm:flex-row sm:items-center">
+              <DownloadAppButton size="lg" fullWidth label="Buka & Install Aplikasi" />
+              <a
+                href="#download"
+                className="inline-flex items-center justify-center gap-1.5 rounded-2xl border border-[rgba(0,163,255,0.2)] bg-white px-4 py-3 text-[12px] font-semibold text-[var(--navy)] transition hover:border-[var(--cyan-brand)] sm:px-5 sm:text-[13px]"
+              >
+                <Smartphone className="h-4 w-4 text-[var(--cyan-brand)]" />
+                Cara Install
+              </a>
+            </div>
           </div>
+
 
 
           <div className="mt-7 flex flex-wrap items-center gap-x-6 gap-y-3 text-xs text-slate-500">
