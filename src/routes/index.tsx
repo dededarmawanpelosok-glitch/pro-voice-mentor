@@ -1075,20 +1075,8 @@ function Pricing() {
 }
 
 /* ───────────── FOOTER ───────────── */
+import { SiteFooter } from "@/components/SiteFooter";
 function Footer() {
-  return (
-    <footer className="border-t border-slate-100 bg-white py-10">
-      <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-5 sm:flex-row sm:px-8">
-        <div className="flex items-center gap-2.5">
-          <LogoMark />
-          <span className="font-display text-base font-bold text-[var(--navy)]">
-            Speaking Pro<span className="text-[var(--cyan-brand)]">™</span>
-          </span>
-        </div>
-        <p className="text-xs text-slate-500">
-          © {new Date().getFullYear()} Speaking Pro™ — The First AI-Powered Public Speaking Platform in Indonesia.
-        </p>
-      </div>
-    </footer>
-  );
+  return <SiteFooter />;
 }
+
