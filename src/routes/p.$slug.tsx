@@ -90,7 +90,7 @@ function DetailPage() {
       {/* Body */}
       <section className="mx-auto max-w-4xl px-5 pb-14 sm:px-8 sm:pb-20">
         <div className="space-y-5">
-          {page.sections.map((s, i) => (
+          {page.sections.map((s: PageSection, i: number) => (
             <article
               key={i}
               className="group rounded-[22px] border border-slate-200/70 bg-white p-6 shadow-[0_1px_2px_rgba(13,33,71,0.04)] transition hover:shadow-[0_20px_40px_-24px_rgba(13,33,71,0.25)] sm:p-8"
