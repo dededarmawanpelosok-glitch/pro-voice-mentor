@@ -70,13 +70,13 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Beta Program Speaking Pro™: Latihan 10 menit/hari, feedback mingguan dari AI Mentor & Coach Faisal Maulana. Terbatas 50 peserta.",
+          "Speaking Pro™ resmi diluncurkan. Install aplikasi web di ponsel Anda — latihan public speaking harian dengan AI Mentor & Coach Faisal Maulana.",
       },
-      { property: "og:title", content: "Speaking Pro™ Beta Program" },
+      { property: "og:title", content: "Speaking Pro™ — Full Version" },
       {
         property: "og:description",
         content:
-          "Karena Public Speaking tidak dipelajari — Public Speaking dilatih. Daftar slot Beta Program.",
+          "Public Speaking tidak dipelajari — Public Speaking dilatih. Download aplikasi Speaking Pro™ sekarang.",
       },
       { property: "og:type", content: "website" },
     ],
