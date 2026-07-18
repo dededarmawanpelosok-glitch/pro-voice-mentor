@@ -916,23 +916,37 @@ function TeamCard({ member }: { member: Member }) {
 }
 
 
-/* ───────────── PRICING ───────────── */
+/* ───────────── PRICING / DOWNLOAD ───────────── */
 function Pricing() {
-  const filled = 26;
-  const total = 50;
-  const pct = (filled / total) * 100;
-
   const includes = [
     "Daily Speaking Drill personal (10 menit/hari)",
     "1x Weekly Audio Submission privat",
     "Evaluasi AI Mentor + Coach Faisal Maulana",
     "Dashboard analitik perkembangan terukur",
-    "Akses prioritas ke fitur Beta selanjutnya",
+    "Akses penuh seluruh fitur Speaking Pro™",
+  ];
+
+  const installSteps = [
+    {
+      icon: Smartphone,
+      title: "Buka di Browser Ponsel",
+      desc: "Kunjungi app.speakingpro.online lewat Chrome (Android) atau Safari (iOS).",
+    },
+    {
+      icon: Share,
+      title: "Ketuk Menu Browser",
+      desc: "Pilih ikon Share di Safari, atau menu titik tiga di Chrome.",
+    },
+    {
+      icon: PlusSquare,
+      title: "Add to Home Screen",
+      desc: "Aplikasi terpasang di layar utama — siap dipakai layaknya app native.",
+    },
   ];
 
   return (
     <section
-      id="pricing"
+      id="download"
       className="relative overflow-hidden py-20 sm:py-28"
       style={{ background: "#0D2147" }}
     >
@@ -946,15 +960,15 @@ function Pricing() {
         <div className="mx-auto max-w-3xl text-center">
           <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3.5 py-1.5 text-[11px] font-semibold uppercase tracking-wider text-[var(--aqua-glow)] backdrop-blur">
             <Sparkles className="h-3.5 w-3.5" />
-            Beta Program Launch Price
+            Full Version — Available Now
           </span>
           <h2 className="mt-5 font-display text-[1.75rem] font-extrabold leading-tight tracking-tight text-white sm:text-[2.6rem]">
-            Investasi Terbaik untuk
+            Install Speaking Pro™
             <br className="hidden sm:block" />{" "}
-            <span className="text-gradient-brand">Keterampilan Seumur Hidup.</span>
+            <span className="text-gradient-brand">di Ponsel Anda Sekarang.</span>
           </h2>
           <p className="mt-4 text-[15px] text-white/70 sm:mt-5 sm:text-lg">
-            Slot beta terbatas. Prioritas berdasarkan urutan pendaftaran.
+            Tanpa Play Store, tanpa App Store. Install sebagai aplikasi web di home screen — ringan, cepat, dan langsung siap latihan.
           </p>
         </div>
 
@@ -966,7 +980,7 @@ function Pricing() {
             <div className="flex flex-wrap items-start justify-between gap-3">
               <div className="min-w-0">
                 <div className="text-[11px] font-semibold uppercase tracking-wider text-[var(--aqua-glow)]">
-                  Speaking Pro™ · Beta Program
+                  Speaking Pro™ · Full Access
                 </div>
                 <h3 className="mt-2 font-display text-xl sm:text-2xl font-bold text-white">
                   Akses Penuh Sistem Latihan
@@ -995,35 +1009,9 @@ function Pricing() {
                 </span>
                 <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-2 text-xs text-white/70">
                   <Clock className="h-3.5 w-3.5 shrink-0 text-[var(--aqua-glow)]" />
-                  Program dimulai Juli 2026
+                  Aktivasi instan setelah install
                 </span>
               </div>
-            </div>
-
-
-            {/* Urgency */}
-            <div className="mt-7 rounded-2xl border border-white/10 bg-white/[0.04] p-5">
-              <div className="flex flex-wrap items-center justify-between gap-2 text-[11px] font-semibold uppercase tracking-wider text-white/70">
-                <span className="flex items-center gap-2">
-                  <span className="relative flex h-2 w-2">
-                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[var(--aqua-glow)] opacity-75" />
-                    <span className="relative inline-flex h-2 w-2 rounded-full bg-[var(--aqua-glow)]" />
-                  </span>
-                  Terbatas Hanya untuk 50 Peserta
-                </span>
-                <span className="text-[var(--aqua-glow)]">
-                  {filled}/{total} SLOT TERISI
-                </span>
-              </div>
-              <div className="mt-3 h-2 w-full overflow-hidden rounded-full bg-white/10">
-                <div
-                  className="h-full rounded-full bg-gradient-to-r from-[var(--cyan-brand)] to-[var(--aqua-glow)] shadow-[0_0_18px_rgba(0,229,255,0.6)]"
-                  style={{ width: `${pct}%` }}
-                />
-              </div>
-              <p className="mt-3 text-xs text-white/60">
-                26 slot sudah terisi · Prioritas diberikan berdasarkan urutan pendaftaran.
-              </p>
             </div>
 
             {/* Includes */}
@@ -1036,18 +1024,53 @@ function Pricing() {
               ))}
             </ul>
 
-            {/* Form */}
+            {/* Primary Download CTA */}
             <div className="mt-7 rounded-2xl border border-white/10 bg-white/[0.04] p-4 sm:mt-8 sm:p-6">
-              <div className="mb-3 text-[11px] font-semibold uppercase tracking-wider text-[var(--aqua-glow)] sm:mb-4 sm:text-xs">
-                Kunci Slot Anda Sekarang
+              <div className="mb-3 flex items-center gap-2 text-[11px] font-semibold uppercase tracking-wider text-[var(--aqua-glow)] sm:mb-4 sm:text-xs">
+                <Zap className="h-3.5 w-3.5" />
+                Buka Aplikasi & Mulai Latihan
               </div>
-              <RegistrationForm variant="dark" />
+              <DownloadAppButton size="lg" fullWidth label="Download Aplikasi Speaking Pro™" />
+              <p className="mt-3 text-center text-[11px] text-white/50">
+                app.speakingpro.online · Web App (PWA) · Tanpa install dari store
+              </p>
+            </div>
+
+            {/* Install steps */}
+            <div className="mt-7 rounded-2xl border border-white/10 bg-white/[0.03] p-5 sm:p-6">
+              <div className="mb-4 text-[11px] font-semibold uppercase tracking-wider text-white/60">
+                3 Langkah Install ke Home Screen
+              </div>
+              <ol className="grid gap-3 sm:grid-cols-3 sm:gap-4">
+                {installSteps.map((s, i) => (
+                  <li
+                    key={s.title}
+                    className="relative rounded-2xl border border-white/10 bg-white/[0.03] p-4"
+                  >
+                    <div className="flex items-center gap-2">
+                      <span className="grid h-8 w-8 place-items-center rounded-xl bg-gradient-to-br from-[var(--cyan-brand)] to-[var(--aqua-glow)] text-white">
+                        <s.icon className="h-4 w-4" />
+                      </span>
+                      <span className="text-[10px] font-bold uppercase tracking-wider text-[var(--aqua-glow)]">
+                        Step 0{i + 1}
+                      </span>
+                    </div>
+                    <div className="mt-3 font-display text-sm font-bold text-white">
+                      {s.title}
+                    </div>
+                    <p className="mt-1.5 text-[12px] leading-relaxed text-white/65">
+                      {s.desc}
+                    </p>
+                  </li>
+                ))}
+              </ol>
             </div>
 
           </div>
         </div>
       </div>
     </section>
+
   );
 }
 
