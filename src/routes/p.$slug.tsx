@@ -42,7 +42,7 @@ export const Route = createFileRoute("/p/$slug")({
 });
 
 function DetailPage() {
-  const { page } = Route.useLoaderData();
+  const { page } = Route.useLoaderData() as { page: PageContent };
 
   return (
     <div className="min-h-screen bg-[var(--bg)] font-sans">
