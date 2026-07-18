@@ -18,6 +18,7 @@ import {
   Award,
   Clock,
   Lock,
+  Download,
   Smartphone,
   Share,
   PlusSquare,
