@@ -198,7 +198,7 @@ function Hero() {
             <div className="mb-3 flex flex-wrap items-center gap-2 text-[11px] font-bold uppercase tracking-wider sm:mb-4 sm:text-xs">
               <span className="inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-[var(--cyan-brand)] to-[var(--neon-aqua)] px-2.5 py-1 text-white shadow-[0_6px_16px_-6px_rgba(0,163,255,0.6)]">
                 <Sparkles className="h-3 w-3" />
-                Gratis 7 Hari
+                Uji Coba Gratis 7 Hari
               </span>
               <span className="text-[var(--navy)]">Tanpa Kartu Kredit · Aktivasi Instan</span>
             </div>
@@ -208,9 +208,9 @@ function Hero() {
               <span className="font-semibold text-[var(--navy)]"> Rp 75.000/bulan</span>.
             </p>
             <div className="mt-4">
-              <DownloadAppButton size="lg" fullWidth label="Mulai Gratis 7 Hari Sekarang" />
+              <DownloadAppButton size="lg" fullWidth label="Download App" />
               <p className="mt-2.5 text-center text-[11px] text-slate-500">
-                Batal kapan saja · Tidak ada biaya tersembunyi
+                Gratis 7 hari · Batal kapan saja · Tidak ada biaya tersembunyi
               </p>
             </div>
           </div>
