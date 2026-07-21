@@ -111,13 +111,18 @@ function Navbar() {
             Speaking Pro<span className="text-[var(--cyan-brand)]">™</span>
           </span>
         </a>
-        <a
-          href="#download"
-          className="btn-gradient shrink-0 inline-flex items-center gap-1.5 rounded-full px-4 py-2 text-[11px] font-semibold tracking-wide sm:px-5 sm:py-2.5 sm:text-xs"
-        >
-          <Sparkles className="h-3.5 w-3.5" />
-          Coba Gratis 7 Hari
-        </a>
+        <div className="flex items-center gap-2 sm:gap-3">
+          <span className="hidden rounded-full border border-[var(--aqua-glow)]/40 bg-[var(--aqua-glow)]/10 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[var(--cyan-brand)] sm:inline-flex sm:px-3 sm:py-1.5 sm:text-[11px]">
+            Gratis 7 Hari
+          </span>
+          <a
+            href="#download"
+            className="btn-gradient shrink-0 inline-flex items-center gap-1.5 rounded-full px-4 py-2 text-[11px] font-semibold tracking-wide sm:px-5 sm:py-2.5 sm:text-xs"
+          >
+            <Download className="h-3.5 w-3.5" />
+            Download App
+          </a>
+        </div>
       </div>
 
     </header>

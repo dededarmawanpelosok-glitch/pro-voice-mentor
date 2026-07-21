@@ -13,7 +13,7 @@ const APP_URL = "https://app.speakingpro.online";
 export function DownloadAppButton({
   size = "md",
   fullWidth = false,
-  label = "Download Aplikasi",
+  label = "Download App",
   className = "",
 }: Props) {
   const sizeCls =
