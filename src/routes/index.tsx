@@ -967,15 +967,15 @@ function Pricing() {
           <div className="relative rounded-[24px] border border-white/10 bg-[#0A192F]/95 p-5 backdrop-blur-xl sm:rounded-[32px] sm:p-10">
 
             <div className="text-center">
-              <div className="inline-flex items-center gap-2 rounded-full border border-[var(--aqua-glow)]/40 bg-[var(--aqua-glow)]/10 px-3 py-1.5 text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-[var(--aqua-glow)]">
+              <div className="inline-flex items-center gap-2 rounded-full border border-[var(--aqua-glow)]/40 bg-[var(--aqua-glow)]/10 px-3 py-1.5 text-[10px] font-bold uppercase tracking-wider text-[var(--aqua-glow)] sm:text-[11px]">
                 <Zap className="h-3.5 w-3.5 shrink-0" />
-                Ujicoba Gratis 7 Hari
+                Uji Coba Gratis 7 Hari
               </div>
-              <div className="mt-5 font-display text-[3rem] font-extrabold leading-none text-white sm:text-[4.5rem]">
-                <span className="text-gradient-brand">Rp 0</span>
+              <div className="mt-5 font-display text-[2.5rem] font-extrabold leading-none text-white sm:text-[4rem]">
+                <span className="text-gradient-brand">Gratis 7 Hari</span>
               </div>
               <p className="mt-2 text-sm text-white/60 sm:text-base">
-                7 hari pertama, gratis penuh. Tanpa kartu kredit.
+                Akses penuh premium. Tanpa kartu kredit. Tanpa risiko.
               </p>
 
               <div className="mt-5 inline-flex flex-wrap items-center justify-center gap-x-2 gap-y-1 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs text-white/70 sm:text-sm">
@@ -999,7 +999,10 @@ function Pricing() {
 
             {/* Primary Download CTA */}
             <div className="mt-8">
-              <DownloadAppButton size="lg" fullWidth label="Klaim Akses Gratis 7 Hari" />
+              <div className="mb-3 text-center text-[11px] font-bold uppercase tracking-wider text-[var(--aqua-glow)]">
+                Mulai uji coba gratis sekarang
+              </div>
+              <DownloadAppButton size="lg" fullWidth label="Download App" />
               <div className="mt-4 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-[11px] text-white/55">
                 <span className="inline-flex items-center gap-1.5">
                   <Zap className="h-3 w-3 text-[var(--aqua-glow)]" />
